@@ -732,85 +732,39 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <section>
-                <p>Install <code>johnny-five</code> and <code>robotarm</code></p>
-                <pre><code data-trim class="js">
+            <h2 class="text-align-left">Install</h2>
+            <pre><code data-trim class="js">
 $ npm install johnny-five
 $ npm install robotarm
-                </code></pre>
-            </section>
-            <section>
-                <pre><code data-trim class="js">
+            </code></pre>
+        </section>
+        <section>
+            <pre><code data-trim class="js">
 var five = require('johnny-five');
+var RobotArm = require('robotarm');
 var board = new five.Board();
 
 board.on('ready', function() {
-    var RobotArm = require('robotarm');
     var robotarm = new RobotArm({
         axis: {
-            pivot: new five.Servo(3),
-            stand: new five.Servo(5),
-            shoulder: new five.Servo(6),
-            elbow: new five.Servo(9),
-            wrist: new five.Servo(10),
             claw: new five.Servo({
                 pin: 11,
                 range: [130, 180]
             })
         }
     });
-                </code></pre>
-            </section>
-            <section>
-                <pre><code data-trim class="js">
-    var motion = {
-        openClaw: {
-            claw: 'min',
-        },
-        closeClaw: {
-            claw: 'max',
-        },
-        turnRightDown: {
-            pivot: 50.00,
-            stand: 151.50,
-            shoulder: 58.00,
-            elbow: 96.00,
-            wrist: 90.00
-        },
-        turnLeftDown: {
-            pivot: 122.00,
-            stand: 151.50,
-            shoulder: 58.00,
-            elbow: 96.00,
-            wrist: 90.00
-        }
-    };
-                </code></pre>
-            </section>
-    
-            <section>
-                <pre><code data-trim class="js">
     robotarm
-        // turn right down and open the claw
         .then(function(next) {
-            go(motion.turnRightDown, 2000); // 2000ms
-            go(motion.openClaw, 2000);
-            setTimeout(next, 2500); // 2500 ms
+            claw.to(130, 1000); // Open the claw in 1000ms
+            setTimeout(next, 1500); // Wait for completion
         })
-        // close the claw
         .then(function(next) {
-            go(motion.closeClaw, 1500);
-            setTimeout(next, 2000);
-        })
-        // turn left down
-        .then(function(next) {
-            go(motion.turnLeftDown, 2000);
-            setTimeout(next, 2500);
+            claw.to(180, 1000); // Close the claw in 1000ms
+            setTimeout(next, 1500); // Wait for completion
         })
         .play({ loop: true });
 });
-                </code></pre>
-            </section>
+            </code></pre>
         </section>
 
         <section data-transition="zoom">
@@ -819,13 +773,13 @@ board.on('ready', function() {
             <br>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 fragment">
                         <img src="images/logo/nodejs.png">
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 fragment">
                         <img src="images/logo/Arduino_Logo.png">
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 fragment">
                         <img src="images/woodworking/woodworking-techniques.jpg">
                     </div>
                 </div>
@@ -871,6 +825,75 @@ board.on('ready', function() {
             <img src="images/woodworking/cnc.jpg" class="stretch">
         </section>
 
+        <section>
+            <h1>硬體部分</h1>
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/demo/cnc/cnc-y.jpg" class="stretch">
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/demo/cnc/cnc-x.jpg" class="stretch">
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/demo/cnc/cnc-z.jpg" class="stretch">
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <section>
+                <img src="images/demo/cnc/cnc-box-front.jpg" class="stretch">
+            </section>
+            <section>
+                <img src="images/demo/cnc/cnc-box-back.jpg" class="stretch">
+            </section>
+            <section>
+                <img src="images/demo/cnc/cnc-box-arduino.jpg" class="stretch">
+            </section>
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/demo/cnc/cnc-front.jpg" class="stretch">
+        </section>
+
+        <section>
+            <h1>電機部分</h1>
+        </section>
+
+        <section>
+            <h2><img src="images/logo/github-128x128.png">GitHub</h2>
+            <h2>https://github.com/grbl/grbl</h2>
+            <h2>https://github.com/grbl/grbl/wiki</h2>
+            <img src="images/logo/Grbl-logo-250px.png" class="stretch">
+            <p>An open source, embedded, high performance g-code-parser and CNC milling controller written in optimized C that will run on a straight Arduino.</p>
+            <aside class="notes">
+                <p>Most open source 3D printers have Grbl in their hearts. It has been adapted for use in hundreds of projects including laser cutters, automatic hand writers, hole drillers, graffiti painters and oddball drawing machines. Due to its performance, simplicity and frugal hardware requirements Grbl has grown into a little open source phenomenon.</p>
+                <p>In 2009, Simen Svale Skogsrud (http://bengler.no/grbl) graced the open-source community by writing and releasing the early versions of Grbl to everyone (inspired by the Arduino GCode Interpreter by Mike Ellery). Since 2011, Grbl is pushing ahead as a community-driven open-source project under the pragmatic leadership of Sungeun K. Jeon Ph.D. (@chamnit).</p>
+            </aside>
+        </section>
+
+        <section>
+            <h2>Grbl's Pins</h2>
+            <img src="images/demo/cnc/Arduino_GRBL.png" class="stretch">
+            <aside class="notes">
+                https://github.com/grbl/grbl/wiki/Connecting-Grbl
+            </aside>
+        </section>
+
+        <section>
+            <img src="images/demo/cnc/cnc-box-arduino.jpg" class="stretch">
+        </section>
+
+        <section>
+            <h1>身為一個專業的FED</h1>
+            <h1>怎麼可以缺少了UI</h1>
+        </section>
+
+        <section>
+            <h1>又經過一個月後...</h1>
+        </section>
+
         <section data-transition="zoom">
             <section>
                 <img src="images/demo/cncjs.png" class="stretch">
@@ -889,8 +912,16 @@ board.on('ready', function() {
             <img src="images/demo/cncjs-preview.gif" class="stretch">
         </section>
 
-        <section>
+        <section data-background="#000" data-transition="zoom">
             <iframe src="https://www.youtube.com/embed/fJyq4fyiGSc" frameborder="0" allowfullscreen class="stretch"></iframe>
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/demo/cnc/cnc-sample.jpg" class="stretch">
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/demo/cnc/cnc-sample-sanding.jpg" class="stretch">
         </section>
 
         <section>
