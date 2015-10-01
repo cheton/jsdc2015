@@ -665,8 +665,20 @@ board.on('ready', function() {
             <img src="images/demo/robotarm.png" class="stretch">
         </section>
 
-        <section>
+        <section data-background="#000">
+            <h1>機器手臂能做些甚麼呢？</h1>
+        </section>
+
+        <section data-background="#000">
+            <iframe src="https://www.youtube.com/embed/zc9X8_JZVkM?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
+        </section>
+
+        <section data-background="#000">
             <iframe src="https://www.youtube.com/embed/tIIJME8-au8?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
+        </section>
+
+        <section data-background="#000">
+            <h1>沒錯！好吃又好玩！</h1>
         </section>
 
         <section>
@@ -675,7 +687,8 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>Control Robot Arm with Joystick</h1>
+            <h2>Control Robot Arm with Joystick</h2>
+            <img src="images/johnny-five/breadboard/joystick-sparkfun.png" class="stretch">
         </section>
 
         <section>
@@ -684,29 +697,48 @@ var five = require('johnny-five');
 var board = new five.Board();
 
 board.on('ready', function() {
-    var claw, joystick;
-
     // Claw servo controller
-    claw = new five.Servo(11);
+    var claw = new five.Servo(11);
 
     // Joystick controller
-    joystick = new five.JoyStick({
-        pins: [ 'A0', 'A1' ] // X, Y
+    var joystick = new five.Joystick({
+        pins: ['A0', 'A1'] // X (claw), Y (none)
     });
 
     // Center the claw servo
     claw.center();
 
-    joystick.on('axismove', function() {
-        var degrees = Math.ceil(180 * this.fixed.y); // 0-180
-        claw.to();
+    joystick.on('change', function() {
+        var degree = five.Fn.scale(this.x, -1, 1, 130, 180);
+        claw.to(degree); // Range: 130°-180°
     });
 });
             </code></pre>
         </section>
 
-        <section data-background="#000" data-transition="zoom">
-            <h1>你覺得JavaScript能做木工嗎？</h1>
+        <section>
+            <h1>Robot Arm Automation</h1>
+        </section>
+
+        <section>
+        </section>
+
+        <section data-transition="zoom">
+            <h1>還記得前面提過的...</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section data-transition="zoom">
+            <h1>你能想像JavaScript也可以幫忙做木工嗎？</h1>
         </section>
 
         <section>
