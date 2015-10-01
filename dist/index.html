@@ -666,15 +666,15 @@ board.on('ready', function() {
         </section>
 
         <section data-background="#000">
-            <h1>機器手臂能做些甚麼呢？</h1>
+            <h1>機械手臂到底能做些甚麼呢？</h1>
         </section>
 
         <section data-background="#000">
-            <iframe src="https://www.youtube.com/embed/zc9X8_JZVkM?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/zc9X8_JZVkM?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
         </section>
 
         <section data-background="#000">
-            <iframe src="https://www.youtube.com/embed/tIIJME8-au8?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
+            <iframe data-src="https://www.youtube.com/embed/tIIJME8-au8?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
         </section>
 
         <section data-background="#000">
@@ -689,6 +689,9 @@ board.on('ready', function() {
         <section>
             <h2>Control Robot Arm with Joystick</h2>
             <img src="images/johnny-five/breadboard/joystick-sparkfun.png" class="stretch">
+        </section>
+
+        <section data-background-video="videos/robotarm-joystick.mp4">
         </section>
 
         <section>
@@ -716,13 +719,104 @@ board.on('ready', function() {
             </code></pre>
         </section>
 
+        <section>
+            <h1>Robot Arm with Automation</h1>
+        </section>
+
+        <section data-background-video="videos/robotarm-automation.mp4">
+        </section>
+
+        <section>
+            <section>
+                <p>Install <code>johnny-five</code> and <code>robotarm</code></p>
+                <pre><code data-trim class="js">
+$ npm install johnny-five
+$ npm install robotarm
+                </code></pre>
+            </section>
+            <section>
+                <pre><code data-trim class="js">
+var five = require('johnny-five');
+var board = new five.Board();
+
+board.on('ready', function() {
+    var RobotArm = require('robotarm');
+    var robotarm = new RobotArm({
+        axis: {
+            pivot: new five.Servo(3),
+            stand: new five.Servo(5),
+            shoulder: new five.Servo(6),
+            elbow: new five.Servo(9),
+            wrist: new five.Servo(10),
+            claw: new five.Servo({
+                pin: 11,
+                range: [130, 180]
+            })
+        }
+    });
+                </code></pre>
+            </section>
+            <section>
+                <pre><code data-trim class="js">
+    var motion = {
+        openClaw: {
+            claw: 'min',
+        },
+        closeClaw: {
+            claw: 'max',
+        },
+        turnRightDown: {
+            pivot: 50.00,
+            stand: 151.50,
+            shoulder: 58.00,
+            elbow: 96.00,
+            wrist: 90.00
+        },
+        turnLeftDown: {
+            pivot: 122.00,
+            stand: 151.50,
+            shoulder: 58.00,
+            elbow: 96.00,
+            wrist: 90.00
+        }
+    };
+                </code></pre>
+            </section>
+    
+            <section>
+                <pre><code data-trim class="js">
+    robotarm
+        // turn right down and open the claw
+        .then(function(next) {
+            go(motion.turnRightDown, 2000); // 2000ms
+            go(motion.openClaw, 2000);
+            setTimeout(next, 2500); // 2500 ms
+        })
+        // close the claw
+        .then(function(next) {
+            go(motion.closeClaw, 1500);
+            setTimeout(next, 2000);
+        })
+        // turn left down
+        .then(function(next) {
+            go(motion.turnLeftDown, 2000);
+            setTimeout(next, 2500);
+        })
+        .play({ loop: true });
+});
+                </code></pre>
+            </section>
+        </section>
+
         <section data-transition="zoom">
             <h1>還記得前面提過的...</h1>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-4">
+                        <img src="images/woodworking/woodworking-techniques.jpg">
                     </div>
                     <div class="col-sm-4">
+                        <img src="images/logo/Arduino_Logo.png">
                     </div>
                     <div class="col-sm-4">
                     </div>
@@ -731,7 +825,8 @@ board.on('ready', function() {
         </section>
 
         <section data-transition="zoom">
-            <h1>你能想像JavaScript也可以幫忙做木工嗎？</h1>
+            <h1>你能想像...</h1>
+            <h1>JavaScript也能幫忙做木工？</h1>
         </section>
 
         <section>
