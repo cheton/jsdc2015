@@ -19,6 +19,22 @@
         text-align: center;
     }
 
+    .gray {
+        color: #666;
+    }
+    .red {
+        color: #E04D2B;
+    }
+    .green {
+        color: #72D376;
+    }
+    .yellow {
+        color: #FADB45;
+    }
+    .blue {
+        color: #3D8FC9;
+    }
+
     section h1, h2, h3, h4, h5, h6 {
         &.black-on-white {
             color: #222;
@@ -27,6 +43,21 @@
         &.white-on-black {
             color: #FFFFFF;
             text-shadow: 2px 2px 4px rgba(34,34,34,1.0);
+        }
+    }
+
+    section.intro {
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        ul {
+            list-style-type: none;
+            > li:first-child {
+                border-top: 1px solid #ddd;
+                padding-top: 10px;
+            }
+            > li {
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -127,6 +158,7 @@
 // override
 .reveal {
     pre {
+        width: 100%;
         margin: 0 auto;
         padding: 0 1em;
     }

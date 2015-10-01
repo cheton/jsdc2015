@@ -48,14 +48,14 @@
             </div>
         </section>
 
-        <section>
-            <h1 style="color: #666;">Hello, <span style="color:#E04D2B">J</span><span style="color:#72D376">S</span><span style="color:#FADB45">D</span><span style="color:#3D8FC9">C</span> 2015</h1>
+        <section class="intro">
+            <h1 class="gray">Hello, <span class="red">J</span><span class="green">S</span><span class="yellow">D</span><span class="blue">C</span> 2015</h1>
+            <h3 class="gray">Cheton Wu (吳奇潭)</h3>
             <ul>
-                <li class="fragment"><h3>My name is Cheton Wu</h3><h4><img src="images/logo/github-128x128.png" width="96">http://github.com/cheton</h4></li>
-                <li class="fragment"><h3>Works at Trend Micro (since 2002)</h3></li>
-                <li class="fragment"><h3>JavaScript at work</h3></li>
-                <li class="fragment"><h3>Woodworking Enthusiast</h3></li>
-                <li class="fragment"><h3>DIY electronics: Arduino, Robotics<h3></li>
+                <li class="fragment"><h3 class="red">Works at Trend Micro (since 2002)</h3></li>
+                <li class="fragment"><h3 class="green">JavaScript at work</h3></li>
+                <li class="fragment"><h3 class="yellow">Woodworking Enthusiast</h3></li>
+                <li class="fragment"><h3 class="blue">DIY electronics: Arduino, Robotics<h3></li>
             </ul>
             <h2 class="fragment" style="color:#444">Why not combine them together?</h2>
             <aside class="notes">
@@ -123,7 +123,7 @@ client
         </section>
 
         <section>
-            <iframe width="854" height="480" src="https://www.youtube.com/embed/jl5v3bsMH_E?t=1080" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
         </section>
 
         <section class="text-align-left">
@@ -144,28 +144,28 @@ client
             </aside>
         </section>
 
-        <section>
+        <section data-transition="zoom">
             <h1 class="font-heiti">想用JavaScript統治物聯網之前</h1>
         </section>
 
-        <section>
+        <section data-transition="zoom">
             <h1 class="font-heiti">你首先要知道...</h1>
         </section>
 
-        <section>
+        <section data-transition="zoom">
             <h1 class="font-heiti">如何用微處理器(Arduino)<br>去控制電路元件</h1>
         </section>
 
-        <section>
+        <section data-transition="zoom">
             <h1 class="font-heiti">如何建立一個<br>可以正常運作的電路</h1>
         </section>
 
-        <section>
+        <section data-transition="zoom">
             <h1 class="font-heiti">如何運用JavaScript<br>跟Arduino建立通訊</h1>
         </section>
 
         <section>
-            <h1 style="color: #007e83; text-shadow: none;">What's Arduino?</h1>
+            <h1 style="color: #007e83; text-shadow: none;">Arduino</h1>
             <div>
                 <img src="images/arduino/illu-arduino-UNO.png">
             <div>
@@ -183,18 +183,22 @@ client
             </div>
             <aside class="notes">
                 <a href="https://www.arduino.cc/">https://www.arduino.cc/</a>
-                <p>The Arduino platform is an open-source hardware system, designed to make it easy to prototype electronics systems. But more than just the hardware, the Arduino ecosystem includes an IDE and software libraries, along with builders and suppliers that create their own versions of the hardware, and much more. To say that the Arduino ecosystem is “massive” may be an understatement. But, to say that you must be be able to write C and be a electrical engineer to build Arduino toys is, conversely, an overstatement.</p>
-                <p>Arduino是一個開放原始碼的開發平台，包含硬體與軟體都是以開放原始碼的方式釋出的，使用者可以使用它來開發各類的感測器或物聯網應用。</p>
+                <p>Arduino是個開放原始碼的單晶片微處理器，它起源於義大利，一開始是為了教學用途，但因為操作簡單一般人很容易就上手，很快地就在世界上流行起來。</p>
+                <p>你可以用Arduino接上任何裝置和傳感器，例如LED、馬達、液晶螢幕，然後搭配自動化控制的程式，就可以輕鬆地操控機器人、四軸飛行器、機械手臂或CNC。</p>
             </aside>
         </section>
 
         <section>
+            <img src="images/arduino/illu_what_is-board.png">
+            <h2 style="color: #007e83; text-shadow: none;">Arduino Board</h2>
+        </section>
+        <section>
             <section>
-                <h1 style="color: #007e83; text-shadow: none;">Arduino Uno R3</h1>
+                <h3>Arduino Uno R3</h2>
                 <img src="images/arduino/ArduinoUno_R3_Layout.png" class="stretch">
             </section>
             <section>
-                <h1 style="color: #007e83; text-shadow: none;">Arduino Uno R3 (Back)</h1>
+                <h3>Arduino Uno R3 (Back)</h2>
                 <img src="images/arduino/ArduinoUno_R3_Back.jpg" class="stretch">
             </section>
             <aside class="notes">
@@ -212,35 +216,44 @@ client
         </section>
 
         <section>
-            <h1 style="color: #007e83; text-shadow: none;">Arduino Nano</h1>
-            <img src="images/arduino/ArduinoNano_Front.jpg">
+            <h3>Arduino Nano</h2>
+            <div>
+                <img src="images/arduino/ArduinoNano_Front.png" style="border: 1px solid #ddd; width: 50%">
+            </div>
+            <div>
+                <img src="images/arduino/ArduinoNano_Back.png" style="border: 1px solid #ddd; width: 50%">
+            </div>
         </section>
 
         <section>
-            <h1 style="color: #007e83; text-shadow: none;">Arduino Nano Expansion</h1>
+            <h3>Arduino Nano Expansion</h2>
             <img src="images/arduino/ArduinoNano_Expansion.jpg" class="stretch">
         </section>
 
         <section>
+            <img src="images/arduino/illu_what_is-ide.png">
+            <h2 style="color: #007e83; text-shadow: none;">Arduino IDE</h2>
+        </section>
+
+        <section>
             <section>
-                <h1 style="color: #007e83; text-shadow: none;">Arduino IDE</h1>
                 <img src="images/arduino/Arduino_IDE.png" class="stretch">
             </section>
             <section data-transition="fade-in slide-out">
-                <h2 style="color: #007e83; text-shadow: none;">Tools > Board</h2>
                 <img src="images/arduino/Arduino_IDE_Board.png" class="stretch">
+                <h2 style="position:absolute; top: 40%; left: 60%;">Board</h2>
             </section>
             <section data-transition="fade-in slide-out">
-                <h2 style="color: #007e83; text-shadow: none;">Tools > Port</h2>
                 <img src="images/arduino/Arduino_IDE_Port.png" class="stretch">
+                <h2 style="position:absolute; top: 40%; left: 60%;">Port</h2>
             </section>
             <section data-transition="fade-in slide-out">
-                <h2 style="color: #007e83; text-shadow: none;">Examples > Basics > Blink</h2>
                 <img src="images/arduino/Arduino_IDE_Blink.png" class="stretch">
+                <h2 style="position:absolute; top: 40%; left: 60%;">Blink</h2>
             </section>
             <section data-transition="fade-in slide-out">
-                <h2 style="color: #007e83; text-shadow: none;">Examples > Firmata</h2>
                 <img src="images/arduino/Arduino_IDE_Firmata.png" class="stretch">
+                <h2 style="position:absolute; top: 40%; left: 60%;">Firmata</h2>
             </section>
             <aside class="notes">
                 Arduino 有一個非常容易上手的 IDE 開發環境，請先到 Arduino 的官方網站下載 Arduino Software，它同時支援 Windows、Mac OS X 與各種的 Linux 系統，支援性非常好，請依照自己的系統類型來安裝。
@@ -254,8 +267,8 @@ client
                         <div class="col-sm-8">
                             <img src="images/arduino/Arduino_Starter_Kit.png" style="height: 100vh">
                         </div>
-                        <div class="col-sm-4">
-                            <span class="text-align-left">基礎套件</span>
+                        <div class="col-sm-4 text-align-left">
+                            <h4>基礎套件</h4>
                             <ul>
                                 <li>Arduino UNO R3</li>
                                 <li>USB Type-A 傳輸線</li>
@@ -355,11 +368,11 @@ board.on('error', function(err) {
             </code></pre>
         </section>
 
-        <section data-background="images/The_Matrix.jpg">
+        <section data-background="images/The_Matrix.jpg" data-transition="zoom">
             <h1 class="white-on-black" style="min-height: 100vh">Take Your Chance</h1>
         </section>
 
-        <section class="j5" style="text-align:left;" data-background="images/johnny-five/pcb.jpg" data-background-size="auto" data-background-repeat="repeat">
+        <section class="j5" style="text-align:left;" data-background="images/johnny-five/pcb.jpg" data-background-size="auto" data-background-repeat="repeat" data-transition="zoom">
             <h1 class="j5__site-head"><a href="http://johnny-five.io/" target="_blank">Johnny-Five</a></h1>
             <p class="j5__site-subhead">
                 The JavaScript
@@ -459,7 +472,9 @@ npm install johnny-five
         </section>
 
         <section>
-            <h2>LED</h2>
+            <p class="text-align-left">
+                <a href="https://github.com/rwaldron/johnny-five/wiki/LED" target="_blank">https://github.com/rwaldron/johnny-five/wiki/LED</a>
+            </p>
             <pre><code data-trim class="js">
 var five = require('johnny-five');
 var board = new five.Board();
@@ -514,18 +529,58 @@ $ node led.js
         </section>
 
         <section>
-            <h2>Motor</h2>
+            <p class="text-align-left">
+                <a href="https://github.com/rwaldron/johnny-five/wiki/Motor" target="_blank">https://github.com/rwaldron/johnny-five/wiki/Motor</a>
+            </p>
             <pre><code data-trim class="js">
+var five = require('johnny-five');
+var board = new five.Board();
+
+board.on('ready', function() {
+    var motor = new five.Motor(5);
+
+    motor.on('start', function() {
+        // Demostrate motor stop in 2 seconds
+        board.wait(2000, function() {
+            motor.stop();
+        });
+    });
+
+    // Start the motor at maximum speed
+    motor.start(255);
+});
             </code></pre>
         </section>
 
         <section>
             <h1>Servo</h1>
-            <img src="images/johnny-five/breadboard/servo.png" class="stretch">
+            <img src="images/johnny-five/breadboard/external-servo-power.png" class="stretch">
         </section>
 
         <section>
-            <h2>Servo</h2>
+            <p class="text-align-left">
+                <a href="https://github.com/rwaldron/johnny-five/wiki/Servo" target="_blank">https://github.com/rwaldron/johnny-five/wiki/Servo</a>
+            </p>
+            <pre><code data-trim class="js">
+var five = require('johnny-five');
+var board = new five.Board();
+
+board.on('ready', function() {
+    var servo = new five.Servo({
+        pin: 11,
+        range: [0, 180]
+    });
+
+    // Set horn to 45°
+    servo.to(45);
+
+    // Angle change takes 500ms to complete
+    servo.to(60, 500);
+
+    // Set horn to 90°
+    servo.center();
+});
+            </code></pre>
         </section>
 
         <section>
@@ -534,142 +589,93 @@ $ node led.js
         </section>
 
         <section>
-            <h2>Temperature</h2>
+            <p class="text-align-left">
+                <a href="https://github.com/rwaldron/johnny-five/wiki/Temperature" target="_blank">https://github.com/rwaldron/johnny-five/wiki/Temperature</a>
+            </p>
             <pre><code data-trim class="js">
-// Temperature Sensor
-var temperatureSensor = new five.Sensor({
-    controller: 'TMP36',
-    pin: 'A0'
-});
+var five = require('johnny-five');
+var board = new five.Board();
 
-// Check Temperature
-function checkTemperature() {
-    temperatureSensor.on('change', function(err, reading) {
-        var voltage = reading * 0.004882813; // i.e. 5V / 1024
-
-        // For Celsius
-        var temperature = (voltage - .5) * 100;
-
-        // For Fahrenheit
-        // temperature = temperature * 1.8 + 32;
-
-        console.log('Temp:', parseInt(temperature));
+board.on('ready', function() {
+    var temperature = new five.Temperature({
+        controller: 'TMP36',
+        pin: 'A0'
     });
-}
+
+    temperature.on('change', function() {
+        console.log('Celsius: %d', this.C);
+        console.log('Fahrenheit: %d', this.F);
+        console.log('Kelvin: %d', this.K);
+    });
+});
             </code></pre>
         </section>
 
         <section>
-            <h1>LCD - I2C</h1>
+            <h1>LCD - I²C</h1>
             <img src="images/johnny-five/breadboard/lcd-i2c-PCF8574.png" class="stretch">
+            <aside class="notes">
+                Inter-integrated Circuit (I²C)
+                只需要兩條信號線：串列資料線(SDA)及串列時脈線(SCL)
+            </aside>
         </section>
 
         <section>
-            <h2>LCD - I2C</h2>
+            <p class="text-align-left">
+                <a href="https://github.com/rwaldron/johnny-five/wiki/LCD" target="_blank">https://github.com/rwaldron/johnny-five/wiki/LCD</a>
+            </p>
+            <pre><code data-trim class="js">
+var five = require('johnny-five');
+var board = new five.Board();
+
+board.on('ready', function() {
+    var lcd = new five.LCD({ 
+        controller: 'PCF8574', // I²C LCD, PCF8574
+        rows: 2,
+        cols: 16
+    });
+
+    lcd.cursor(0, 0) // Sets the cursor position
+       .print('Loading...');
+
+    this.wait(1000, function() {
+        lcd.clear() // Clears all text on the LCD
+           .home() // Sets the cursor position to row 0, column 0
+           .print('Hello, JSDC 2015');
+    });
+});
+            </code></pre>
         </section>
 
-        <section>
+        <section data-transition="zoom">
             <h1>Live Demos</h1>
         </section>
 
-        <section data-background="images/iot-background-opacity-30.png">
+        <section data-background="images/iot-background-opacity-30.png" data-transition="zoom">
             <h1 class="black-on-white">IoT Weather Display</h1>
             <img src="images/demo/iot-weather-display.jpg" class="stretch">
         </section>
 
         <section>
-            <h2>Communicating Over WiFi</h2>
-            <img src="images/usr-wifi232/HF-LPT100-Breakout-WIFI400-Front-With-Module-sm.jpg" class="stretch">
-            <br>
-            <div class="text-align-left">
-                <h4>References</h4>
-                <ul>
-                    <li><a href="https://gist.github.com/ajfisher/1fdbcbbf96b7f2ba73cd" target="_blank">A NodeBot Over WiFi</a></li>
-                    <li><a href="http://2xod.com/articles/Arduino_Wifi_With_Hi_Flying_HF-LPT100_or_USR-WIFI232/" target="_blank">Arduino Wifi With Hi Flying HF-LPT100/USR WIFI232-T</a></li>
-                </ul>
-            </div>
-            
-            <aside class="notes">
-                <a href="https://gist.github.com/ajfisher/1fdbcbbf96b7f2ba73cd" target="_blank">A NodeBot Over WiFi</a>
-                <a href="http://2xod.com/articles/Arduino_Wifi_With_Hi_Flying_HF-LPT100_or_USR-WIFI232/" target="_blank">Arduino Wifi With Hi Flying HF-LPT100/USR WIFI232-T</a>
-            </aside>
+            <h2><img src="images/logo/github-128x128.png">GitHub</h2>
+            <h2>https://github.com/cheton/iot-weather-display</h2>
         </section>
 
-        <section>
-            <h2>Module Setup (w/ Breakout Board)</h2>
-            <img src="images/usr-wifi232/HF-LPT100-Breakout-WIFI400-Front-sm.jpg">
-            <br><br>
-            <div class="container-fluid text-align-left" style="width: 60%; margin: 0 auto">
-                <div class="row">
-                    <div class="col-sm-5">WiFi232 Pin 1 (GND)</div>
-                    <div class="col-sm-2 text-align-center">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                    <div class="col-sm-5">GND</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-5">WiFi232 Pin 2 (3.3V)</div>
-                    <div class="col-sm-2 text-align-center">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                    <div class="col-sm-5">VCC (3.3V)</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-5">WiFi232 Pin 5 (RX)</div>
-                    <div class="col-sm-2 text-align-center">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                    <div class="col-sm-5">Arduino (TX) Pin 1</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-5">WiFi232 Pin 6 (TX)</div>
-                    <div class="col-sm-2 text-align-center">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </div>
-                    <div class="col-sm-5">Arduino (RX) Pin 0</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Johnny-Five Setup</h2>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <span>Node.js</span>
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                        <span>Pseudo Terminal (~/dev/ttyV0)</span>
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                        <span>TCP Socket (10.0.1.12:8899)</span>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <ol style="width: 100%">
-                <li class="fragment">
-                    Use <code>socat</code> to fake a serial terminal:
-                    <pre><code data-trim class="bash">
-socat -d -d pty,nonblock,link=$HOME/dev/ttyV0 tcp:10.0.1.12:8899
-                    </code></pre>
-                    <br>
-                </li>
-                <li class="fragment">
-                    Execute it like this:
-                    <pre><code data-trim class="bash">
-node blink.js ~/dev/ttyV0
-                    </code></pre>
-                </li>
-            </ol>
-        </section>
-
-        <section>
+        <section data-transition="zoom">
             <img src="images/demo/robotarm.png" class="stretch">
+        </section>
+
+        <section>
+            <iframe src="https://www.youtube.com/embed/tIIJME8-au8?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
+        </section>
+
+        <section>
+            <h2><img src="images/logo/github-128x128.png">GitHub</h2>
+            <h2>https://github.com/cheton/robotarm</h2>
+        </section>
+
+        <section>
+            <h1>Control Robot Arm with Joystick</h1>
         </section>
 
         <section>
@@ -693,101 +699,182 @@ board.on('ready', function() {
 
     joystick.on('axismove', function() {
         var degrees = Math.ceil(180 * this.fixed.y); // 0-180
-        claw.move(degrees); // Move the claw
+        claw.to();
     });
 });
             </code></pre>
-            <aside class="notes">
-                <h1>NodeConf 2012 Rick Waldron: Johnny-Five JavaScript Robots</h1>
-                <span>https://www.youtube.com/watch?v=jf-cEB3U2UQ</span>
-            </aside>
+        </section>
 
+        <section data-background="#000" data-transition="zoom">
+            <h1>你覺得JavaScript能做木工嗎？</h1>
         </section>
 
         <section>
-            <h1>Road to JavaScript Maker</h1>
-            <h2>https://blog.safaribooksonline.com/2013/07/16/javascript-powered-arduino-with-johnny-five/</h2>
+            <img src="images/" class="stretch">
         </section>
 
         <section>
-            <h2>一旦玩出興趣來其實也是個錢坑 XD</h2>
+            <img src="images/" class="stretch">
         </section>
 
         <section>
-            <aside class="notes">
-                http://blogger.gtwang.org/2015/02/arduino-uno-tutorial.html
-                <p>這是義大利原裝進口的 Arduino UNO R3 原廠開發板，適合用來開發各類的感測器或物聯網應用。</p>
-                <p>Arduino 是一個開放原始碼的開發平台，包含硬體與軟體都是以開放原始碼的方式釋出的，使用者可以使用它來開發各式各樣的應用，以下是簡單的開箱介紹。</p>
-                <p>這是原廠外盒。</p>
-                <p>內容物除了 Arduino UNO R3 的板子之外，還有簡單的說明書與貼紙。</p>
-                <p>Arduino UNO R3 正面照片，中間那個黑色的就是最主要的 ATmega328P 微控制器（MCU）。</p>
-                <p>這是背面的樣子。</p>
-                <p>側面有各個針腳的標示，這一側是電源（power）與類比輸入（analog in）。</p>
-                <p>這是另外一面，這邊是數位（digital）的部分。</p>
-                <p>在開始開發前，要準備一條標準的 USB 線（A 型轉 B 型，這種線通常是印表機在用的）：</p>
-                <p>利用這條 USB 線連接電腦之後，就可以開始使用 Arduino UNO 了。</p>
-                <p>Arduino 有一個非常容易上手的 IDE 開發環境，請先到 Arduino 的官方網站下載 Arduino Software，它同時支援 Windows、Mac OS X 與各種的 Linux 系統，支援性非常好，請依照自己的系統類型來安裝。</p>
-                <p>安裝好之後，打開 Arduino 的 IDE，會像這個樣子：</p>
-                <p>在這裡我們就可以開始開發程式了，而對於初學者而言，可以先從範例程式開始學習。Arduino IDE 環境中有很多內建的範例，對於剛入門的初學者而言非常方便。</p>
-                <p>這裡我們隨便開啟一個 Blink 的範例程式。</p>
-                <p>Blink 這個範例是讓 Arduino 板子上面的 LED 燈閃爍，再打開程式之後，如果要把這個程式放進 Arduino UNO 中執行，只要按下上傳程式的按鈕即可。</p>
-                <p>當程式上傳完成後，下方會有 Done uploading 的訊息，另外還有一些空間使用率的資訊，以 Arduino UNO 而言，他只有 32 KB 的快閃記憶體（flash），而這個程式用掉了 1KB 左右（1,030 bytes）。</p>
-                <p>當程式上傳完畢之後，Arduino UNO 會自動執行剛剛上傳的程式，所以這時候板子上面的 LED 燈應該已經開始在閃了。</p>
-                <p>不過 Arduino UNO 出場預設燒錄的程式就會讓 LED 燈不斷閃爍，所以燒進這個程式可能感覺沒什麼變化，您可以更改程式中的延遲時間，例如將 delay(1000) 改為 delay(500)，這樣就會有些不一樣了。</p>
-                <p>在 Arduino 的官方網站上有很多開發者資源，包含各種文件與範例，建議初學者多多利用。</p>
-            </aside>
+            <h2><img src="images/logo/github-128x128.png">GitHub</h2>
+            <h2>https://github.com/cheton/cnc.js</h2>
+        </section>
+
+        <section data-transition="zoom">
+            <h1>CNC.js</h1>
+            <img src="demo/cnc.png" class="stretch">
         </section>
 
         <section>
-            <h1>Firmata Protocol</h1>
+            <h1>Q&A</h1>
         </section>
 
         <section>
-            <h1>The Firmata library for Arduino</h1>
-            <h2><a href="https://www.arduino.cc/en/Reference/Firmata" target="_blank">https://www.arduino.cc/en/Reference/Firmata</a></h2>
-
-            <aside class="notes">
-                <p>The Firmata library implements the Firmata protocol for communicating with software on the host computer. This allows you to write custom firmware without having to create your own protocol and objects for the programming environment that you are using.</p>
-            </aside>
-        </section>
-        <section>
-            <h2>Example</h2>
-            <img src="images/Arduino_Firmata_Example.png">
-
-            <aside class="notes">
-                <p>This example shows how to send and receive analog messages using Firmata.</p>
-            </aside>
         </section>
 
         <section>
-            The Internet of Things (IoT) will be created by the people who know the Internet best.
+            <h1>The Internet of Things (IoT)<br>will be created by the people<br>who know the Internet best.</h1>
         </section>
 
         <section>
-            Tessel: The End of Web Development (as we know it)
-            http://www.slideshare.net/TechnicalMachine/tessel-the-end-of-web-development-as-we-know-it?related=1
-        </section>
+            <section>
+                <h1>Backup Slides</h1>
+            </section>
 
-        <section>
-            <h1>The Firmata library for Node.js</h1>
-            <h2><a href="https://github.com/jgautier/firmata" target="_blank">https://github.com/jgautier/firmata</a></h2>
-            <p>A Node library to interact with an Arduino running the firmata protocol.</p>
-        </section>
+            <!-- Communicating Over WiFi -->
+            <section>
+                <h2>Communicating Over WiFi</h2>
+                <img src="images/usr-wifi232/HF-LPT100-Breakout-WIFI400-Front-With-Module-sm.jpg" class="stretch">
+                <br>
+                <div class="text-align-left">
+                    <h4>References</h4>
+                    <ul>
+                        <li><a href="https://gist.github.com/ajfisher/1fdbcbbf96b7f2ba73cd" target="_blank">A NodeBot Over WiFi</a></li>
+                        <li><a href="http://2xod.com/articles/Arduino_Wifi_With_Hi_Flying_HF-LPT100_or_USR-WIFI232/" target="_blank">Arduino Wifi With Hi Flying HF-LPT100/USR WIFI232-T</a></li>
+                    </ul>
+                </div>
+                
+                <aside class="notes">
+                    <a href="https://gist.github.com/ajfisher/1fdbcbbf96b7f2ba73cd" target="_blank">A NodeBot Over WiFi</a>
+                    <a href="http://2xod.com/articles/Arduino_Wifi_With_Hi_Flying_HF-LPT100_or_USR-WIFI232/" target="_blank">Arduino Wifi With Hi Flying HF-LPT100/USR WIFI232-T</a>
+                </aside>
+            </section>
 
-        <section>
-            <img src="images/fritzing.png">
-        </section>
+            <section>
+                <h2>Module Setup (w/ Breakout Board)</h2>
+                <img src="images/usr-wifi232/HF-LPT100-Breakout-WIFI400-Front-sm.jpg">
+                <br><br>
+                <div class="container-fluid text-align-left" style="width: 60%; margin: 0 auto">
+                    <div class="row">
+                        <div class="col-sm-5">WiFi232 Pin 1 (GND)</div>
+                        <div class="col-sm-2 text-align-center">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </div>
+                        <div class="col-sm-5">GND</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">WiFi232 Pin 2 (3.3V)</div>
+                        <div class="col-sm-2 text-align-center">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </div>
+                        <div class="col-sm-5">VCC (3.3V)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">WiFi232 Pin 5 (RX)</div>
+                        <div class="col-sm-2 text-align-center">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </div>
+                        <div class="col-sm-5">Arduino (TX) Pin 1</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">WiFi232 Pin 6 (TX)</div>
+                        <div class="col-sm-2 text-align-center">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </div>
+                        <div class="col-sm-5">Arduino (RX) Pin 0</div>
+                    </div>
+                </div>
+            </section>
 
-        <section>
-            <img src="images/fritzing-preview-bb.png">
-        </section>
+            <section>
+                <h2>Johnny-Five Setup</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span>Node.js</span>
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                            <span>Pseudo Terminal (~/dev/ttyV0)</span>
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                            <span>TCP Socket (10.0.1.12:8899)</span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <ol style="width: 100%">
+                    <li class="fragment">
+                        Use <code>socat</code> to fake a serial terminal:
+                        <pre><code data-trim class="bash">
+    socat -d -d pty,nonblock,link=$HOME/dev/ttyV0 tcp:10.0.1.12:8899
+                        </code></pre>
+                        <br>
+                    </li>
+                    <li class="fragment">
+                        Execute it like this:
+                        <pre><code data-trim class="bash">
+    node blink.js ~/dev/ttyV0
+                        </code></pre>
+                    </li>
+                </ol>
+            </section>
 
-        <section>
-            <img src="images/fritzing-preview-schem.png">
-        </section>
+            <!-- Firmata -->
+            <section>
+                <h1>Firmata Protocol</h1>
+            </section>
+            <section>
+                <h1>The Firmata library for Arduino</h1>
+                <h2><a href="https://www.arduino.cc/en/Reference/Firmata" target="_blank">https://www.arduino.cc/en/Reference/Firmata</a></h2>
 
-        <section>
-            <img src="images/fritzing-preview-pcb.png">
+                <aside class="notes">
+                    <p>The Firmata library implements the Firmata protocol for communicating with software on the host computer. This allows you to write custom firmware without having to create your own protocol and objects for the programming environment that you are using.</p>
+                </aside>
+            </section>
+            <section>
+                <h2>Example</h2>
+                <img src="images/arduino/Arduino_Firmata_Example.png">
+
+                <aside class="notes">
+                    <p>This example shows how to send and receive analog messages using Firmata.</p>
+                </aside>
+            </section>
+            <section>
+                <h1>The Firmata library for Node.js</h1>
+                <h2><a href="https://github.com/jgautier/firmata" target="_blank">https://github.com/jgautier/firmata</a></h2>
+                <p>A Node library to interact with an Arduino running the firmata protocol.</p>
+            </section>
+
+            <!-- Fritzing -->
+            <section>
+                <img src="images/fritzing.png">
+            </section>
+            <section>
+                <img src="images/fritzing-preview-bb.png">
+            </section>
+            <section>
+                <img src="images/fritzing-preview-schem.png">
+            </section>
+            <section>
+                <img src="images/fritzing-preview-pcb.png">
+            </section>
+
         </section>
     </div>
 </div>
