@@ -102,7 +102,8 @@
         </section>
 
         <section>
-            <pre><code data-trim class="js">
+            <section>
+                <pre><code data-trim class="js">
 var arDrone = require('ar-drone');
 var client = arDrone.createClient();
 
@@ -119,11 +120,11 @@ client
         this.stop();
         this.land();
     });
-            </code></pre>
-        </section>
-
-        <section>
-            <iframe src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
+                </code></pre>
+            </section>
+            <section>
+                <iframe src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
+            </section>
         </section>
 
         <section class="text-align-left">
@@ -145,7 +146,7 @@ client
         </section>
 
         <section data-transition="zoom">
-            <h1 class="font-heiti">想用JavaScript統治物聯網之前</h1>
+            <h1 class="font-heiti">想用JavaScript統治物聯網(IoT)之前</h1>
         </section>
 
         <section data-transition="zoom">
@@ -463,7 +464,7 @@ npm install johnny-five
         </section>
 
         <section>
-            <h1>LED</h1>
+            <h1>Example: LED</h1>
             <img src="images/johnny-five/breadboard/led-13.gif">
             <aside class="notes">
                 <p>LED on pin 13 (Arduino UNO)</p>
@@ -524,7 +525,7 @@ $ node led.js
         </section>
 
         <section>
-            <h1>Motor</h1>
+            <h1>Example: Motor</h1>
             <img src="images/johnny-five/breadboard/motor.png" class="stretch">
         </section>
 
@@ -553,7 +554,7 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>Servo</h1>
+            <h1>Example: Servo</h1>
             <img src="images/johnny-five/breadboard/external-servo-power.png" class="stretch">
         </section>
 
@@ -584,35 +585,7 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>Temperature</h1>
-            <img src="images/johnny-five/breadboard/temperature-tmp36.png" class="stretch">
-        </section>
-
-        <section>
-            <p class="text-align-left">
-                <a href="https://github.com/rwaldron/johnny-five/wiki/Temperature" target="_blank">https://github.com/rwaldron/johnny-five/wiki/Temperature</a>
-            </p>
-            <pre><code data-trim class="js">
-var five = require('johnny-five');
-var board = new five.Board();
-
-board.on('ready', function() {
-    var temperature = new five.Temperature({
-        controller: 'TMP36',
-        pin: 'A0'
-    });
-
-    temperature.on('change', function() {
-        console.log('Celsius: %d', this.C);
-        console.log('Fahrenheit: %d', this.F);
-        console.log('Kelvin: %d', this.K);
-    });
-});
-            </code></pre>
-        </section>
-
-        <section>
-            <h1>LCD - I²C</h1>
+            <h1>Example: LCD - I²C</h1>
             <img src="images/johnny-five/breadboard/lcd-i2c-PCF8574.png" class="stretch">
             <aside class="notes">
                 Inter-integrated Circuit (I²C)
@@ -659,6 +632,38 @@ board.on('ready', function() {
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
             <h2>https://github.com/cheton/iot-weather-display</h2>
+        </section>
+
+        <section>
+            <img src="images/demo/OpenWeatherMap.png" class="stretch">
+        </section>
+
+        <section>
+            <h2>API Usage</h2>
+            <p>http://api.openweathermap.org/data/2.5/weather?units=metric&q=Taipei</p>
+            <img src="images/demo/openweathermap-api.png" class="stretch">
+        </section>
+
+        <section>
+            <img src="images/demo/lcd-weather.png" style="position: absolute; top: 200px; left: 900px; z-index: 1">
+            <pre><code data-trim class="js">
+var request = require('request');
+var qs = '?q=Taipei&units=metric';
+var url = 'http://api.openweathermap.org/data/2.5/weather' + qs;
+
+request(url, function(err, rsp, body) {
+    var data = JSON.parse(body);
+        :   :  :
+    lcd.cursor(0, 0)
+       .print(dt);
+    lcd.cursor(1, 0)
+       .print(name + ' (' + weather + ')');
+    lcd.cursor(2, 0)
+       .print('T:' + temp + ' (' + tempMin + '-' + tempMax + ')');
+    lcd.cursor(3, 0)
+       .print('H:' + humidity + '%  W:' + windSpeed + 'km/h');
+});
+</code></pre>
         </section>
 
         <section data-transition="zoom">
