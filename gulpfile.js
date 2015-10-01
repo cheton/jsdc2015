@@ -41,9 +41,9 @@ gulp.task('reveal-plugin', function() {
         .pipe(gulp.dest('dist/vendor/reveal/plugin'));
 });
 
-gulp.task('demo', function() {
-    return gulp.src('src/demo/**/*')
-        .pipe(gulp.dest('dist/demo'));
+gulp.task('videos', function() {
+    return gulp.src('src/videos/**/*')
+        .pipe(gulp.dest('dist/videos'));
 });
 
 gulp.task('js', function() {
@@ -151,7 +151,7 @@ gulp.task('build', function(callback) {
     runSequence(
         'clean',
         'bower',
-        [ 'reveal', 'demo', 'css', 'js', 'html', 'images' ]
+        [ 'reveal', 'videos', 'css', 'js', 'html', 'images' ]
     );
 });
 gulp.task('serve', ['connect', 'watch']);

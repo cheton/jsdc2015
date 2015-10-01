@@ -102,7 +102,8 @@
         </section>
 
         <section>
-            <pre><code data-trim class="js">
+            <section>
+                <pre><code data-trim class="js">
 var arDrone = require('ar-drone');
 var client = arDrone.createClient();
 
@@ -119,11 +120,11 @@ client
         this.stop();
         this.land();
     });
-            </code></pre>
-        </section>
-
-        <section>
-            <iframe src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
+                </code></pre>
+            </section>
+            <section>
+                <iframe src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
+            </section>
         </section>
 
         <section class="text-align-left">
@@ -145,7 +146,7 @@ client
         </section>
 
         <section data-transition="zoom">
-            <h1 class="font-heiti">想用JavaScript統治物聯網之前</h1>
+            <h1 class="font-heiti">想用JavaScript統治物聯網(IoT)之前</h1>
         </section>
 
         <section data-transition="zoom">
@@ -463,7 +464,7 @@ npm install johnny-five
         </section>
 
         <section>
-            <h1>LED</h1>
+            <h1>Example: LED</h1>
             <img src="images/johnny-five/breadboard/led-13.gif">
             <aside class="notes">
                 <p>LED on pin 13 (Arduino UNO)</p>
@@ -524,7 +525,7 @@ $ node led.js
         </section>
 
         <section>
-            <h1>Motor</h1>
+            <h1>Example: Motor</h1>
             <img src="images/johnny-five/breadboard/motor.png" class="stretch">
         </section>
 
@@ -553,7 +554,7 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>Servo</h1>
+            <h1>Example: Servo</h1>
             <img src="images/johnny-five/breadboard/external-servo-power.png" class="stretch">
         </section>
 
@@ -584,35 +585,7 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>Temperature</h1>
-            <img src="images/johnny-five/breadboard/temperature-tmp36.png" class="stretch">
-        </section>
-
-        <section>
-            <p class="text-align-left">
-                <a href="https://github.com/rwaldron/johnny-five/wiki/Temperature" target="_blank">https://github.com/rwaldron/johnny-five/wiki/Temperature</a>
-            </p>
-            <pre><code data-trim class="js">
-var five = require('johnny-five');
-var board = new five.Board();
-
-board.on('ready', function() {
-    var temperature = new five.Temperature({
-        controller: 'TMP36',
-        pin: 'A0'
-    });
-
-    temperature.on('change', function() {
-        console.log('Celsius: %d', this.C);
-        console.log('Fahrenheit: %d', this.F);
-        console.log('Kelvin: %d', this.K);
-    });
-});
-            </code></pre>
-        </section>
-
-        <section>
-            <h1>LCD - I²C</h1>
+            <h1>Example: LCD - I²C</h1>
             <img src="images/johnny-five/breadboard/lcd-i2c-PCF8574.png" class="stretch">
             <aside class="notes">
                 Inter-integrated Circuit (I²C)
@@ -661,21 +634,69 @@ board.on('ready', function() {
             <h2>https://github.com/cheton/iot-weather-display</h2>
         </section>
 
+        <section>
+            <img src="images/demo/OpenWeatherMap.png" class="stretch">
+        </section>
+
+        <section>
+            <h2>API Usage</h2>
+            <p>http://api.openweathermap.org/data/2.5/weather?units=metric&q=Taipei</p>
+            <img src="images/demo/openweathermap-api.png" class="stretch">
+        </section>
+
+        <section>
+            <img src="images/demo/lcd-weather.png" style="position: absolute; top: 200px; left: 900px; z-index: 1">
+            <pre><code data-trim class="js">
+var request = require('request');
+var qs = '?q=Taipei&units=metric';
+var url = 'http://api.openweathermap.org/data/2.5/weather' + qs;
+
+request(url, function(err, rsp, body) {
+    var data = JSON.parse(body);
+        :   :  :
+    lcd.cursor(0, 0)
+       .print(dt);
+    lcd.cursor(1, 0)
+       .print(name + ' (' + weather + ')');
+    lcd.cursor(2, 0)
+       .print('T:' + temp + ' (' + tempMin + '-' + tempMax + ')');
+    lcd.cursor(3, 0)
+       .print('H:' + humidity + '%  W:' + windSpeed + 'km/h');
+});
+</code></pre>
+        </section>
+
         <section data-transition="zoom">
             <img src="images/demo/robotarm.png" class="stretch">
         </section>
 
-        <section>
-            <iframe src="https://www.youtube.com/embed/tIIJME8-au8?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
+        <section data-background="#000">
+            <h1>機械手臂到底能做些甚麼呢？</h1>
+        </section>
+
+        <section data-background="#000">
+            <iframe data-src="https://www.youtube.com/embed/zc9X8_JZVkM?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
+        </section>
+
+        <section data-background="#000">
+            <iframe data-src="https://www.youtube.com/embed/tIIJME8-au8?start=20" frameborder="0" allowfullscreen class="stretch"></iframe>
+        </section>
+
+        <section data-background="#000">
+            <h1>沒錯！好吃又好玩！</h1>
         </section>
 
         <section>
-            <h3><img src="images/logo/github-128x128.png">GitHub</h3>
+            <h2><img src="images/logo/github-128x128.png">GitHub</h2>
             <h2>https://github.com/cheton/robotarm</h2>
         </section>
 
         <section>
-            <h1>Control Robot Arm with Joystick</h1>
+            <h2>Control Robot Arm with Joystick</h2>
+            <img src="images/johnny-five/breadboard/joystick-sparkfun.png" class="stretch">
+        </section>
+
+        <section data-background-video="videos/robotarm-joystick.mp4">
         </section>
 
         <section>
@@ -684,49 +705,192 @@ var five = require('johnny-five');
 var board = new five.Board();
 
 board.on('ready', function() {
-    var claw, joystick;
-
     // Claw servo controller
-    claw = new five.Servo(11);
+    var claw = new five.Servo(11);
 
     // Joystick controller
-    joystick = new five.JoyStick({
-        pins: [ 'A0', 'A1' ] // X, Y
+    var joystick = new five.Joystick({
+        pins: ['A0', 'A1'] // X (claw), Y (none)
     });
 
     // Center the claw servo
     claw.center();
 
-    joystick.on('axismove', function() {
-        var degrees = Math.ceil(180 * this.fixed.y); // 0-180
-        claw.to();
+    joystick.on('change', function() {
+        var degree = five.Fn.scale(this.x, -1, 1, 130, 180);
+        claw.to(degree); // Range: 130°-180°
     });
 });
             </code></pre>
         </section>
 
-        <section data-background="#000" data-transition="zoom">
-            <h1>你覺得JavaScript能做木工嗎？</h1>
+        <section>
+            <h1>Robot Arm with Automation</h1>
+        </section>
+
+        <section data-background-video="videos/robotarm-automation.mp4">
         </section>
 
         <section>
-            <img src="images/" class="stretch">
-        </section>
+            <section>
+                <p>Install <code>johnny-five</code> and <code>robotarm</code></p>
+                <pre><code data-trim class="js">
+$ npm install johnny-five
+$ npm install robotarm
+                </code></pre>
+            </section>
+            <section>
+                <pre><code data-trim class="js">
+var five = require('johnny-five');
+var board = new five.Board();
 
-        <section>
-            <img src="images/" class="stretch">
+board.on('ready', function() {
+    var RobotArm = require('robotarm');
+    var robotarm = new RobotArm({
+        axis: {
+            pivot: new five.Servo(3),
+            stand: new five.Servo(5),
+            shoulder: new five.Servo(6),
+            elbow: new five.Servo(9),
+            wrist: new five.Servo(10),
+            claw: new five.Servo({
+                pin: 11,
+                range: [130, 180]
+            })
+        }
+    });
+                </code></pre>
+            </section>
+            <section>
+                <pre><code data-trim class="js">
+    var motion = {
+        openClaw: {
+            claw: 'min',
+        },
+        closeClaw: {
+            claw: 'max',
+        },
+        turnRightDown: {
+            pivot: 50.00,
+            stand: 151.50,
+            shoulder: 58.00,
+            elbow: 96.00,
+            wrist: 90.00
+        },
+        turnLeftDown: {
+            pivot: 122.00,
+            stand: 151.50,
+            shoulder: 58.00,
+            elbow: 96.00,
+            wrist: 90.00
+        }
+    };
+                </code></pre>
+            </section>
+    
+            <section>
+                <pre><code data-trim class="js">
+    robotarm
+        // turn right down and open the claw
+        .then(function(next) {
+            go(motion.turnRightDown, 2000); // 2000ms
+            go(motion.openClaw, 2000);
+            setTimeout(next, 2500); // 2500 ms
+        })
+        // close the claw
+        .then(function(next) {
+            go(motion.closeClaw, 1500);
+            setTimeout(next, 2000);
+        })
+        // turn left down
+        .then(function(next) {
+            go(motion.turnLeftDown, 2000);
+            setTimeout(next, 2500);
+        })
+        .play({ loop: true });
+});
+                </code></pre>
+            </section>
         </section>
 
         <section data-transition="zoom">
-            <h1>CNC.js</h1>
-            <img src="demo/cnc.png" class="stretch">
+            <h1>還記得前面提過的...</h1>
+            <br>
+            <br>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="images/logo/nodejs.png">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/logo/Arduino_Logo.png">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/woodworking/woodworking-techniques.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section data-transition="zoom">
+            <h1>JavaScript也能幫忙做木工？</h1>
+        </section>
+
+        <section data-transition="zoom">
+            <h1>先來看看之前的作品</h1>
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/woodworking/angrybirds-1.jpg" class="stretch">
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/woodworking/angrybirds-2.jpg" class="stretch">
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/woodworking/bookshelf.jpg" class="stretch">
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/woodworking/cotton-reel-holder.jpg" class="stretch">
+            <aside class="notes">
+                線捲盒
+            </aside>
+        </section>
+
+        <section>
+            <img src="images/woodworking/woodworking-tips.png" class="stretch">
+        </section>
+
+        <section data-background="#000" data-transition="zoom">
+            <img src="images/woodworking/cnc.jpg" class="stretch">
+        </section>
+
+        <section data-transition="zoom">
+            <section>
+                <img src="images/demo/cncjs.png" class="stretch">
+            </section>
+        </section>
+
+        <section>
+            <h2><img src="images/logo/github-128x128.png">GitHub</h2>
+            <h2>https://github.com/cheton/cnc.js</h2>
+            <br>
+            <p>Powered By<p>
+            <p>React, Socket.IO, Three.js and WebAppEngine</p>
+        </section>
+
+        <section>
+            <img src="images/demo/cncjs-preview.gif" class="stretch">
+        </section>
+
+        <section>
+            <iframe src="https://www.youtube.com/embed/fJyq4fyiGSc" frameborder="0" allowfullscreen class="stretch"></iframe>
         </section>
 
         <section>
             <h1>Q&A</h1>
-        </section>
-
-        <section>
         </section>
 
         <section>
@@ -858,16 +1022,16 @@ board.on('ready', function() {
 
             <!-- Fritzing -->
             <section>
-                <img src="images/fritzing.png">
+                <img src="images/fritzing/fritzing.png">
             </section>
             <section>
-                <img src="images/fritzing-preview-bb.png">
+                <img src="images/fritzing/fritzing-preview-bb.png">
             </section>
             <section>
-                <img src="images/fritzing-preview-schem.png">
+                <img src="images/fritzing/fritzing-preview-schem.png">
             </section>
             <section>
-                <img src="images/fritzing-preview-pcb.png">
+                <img src="images/fritzing/fritzing-preview-pcb.png">
             </section>
 
         </section>
