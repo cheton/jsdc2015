@@ -11,4 +11,4 @@ This will install `http-server` globally.
 ```bash
 http-server dist
 ```
-Now you can visit `http://localhost:8080` to view the server.
+Now you can visit `http://localhost:8080` to view the slides.
