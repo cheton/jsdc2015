@@ -1,0 +1,185 @@
+@import url("common.css");
+@import url("reveal.css");
+
+.reveal {
+    font-family: Helvetica, Arial, "Heiti TC", "Microsoft YaHei", STXihei, sans-serif;
+    color: #333;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: Helvetica, Arial, "Heiti TC", "Microsoft YaHei", STXihei, sans-serif;
+    }
+
+    .text-align-left {
+        text-align: left;
+    }
+    .text-align-right {
+        text-align: right;
+    }
+    .text-align-center {
+        text-align: center;
+    }
+
+    .gray {
+        color: #666;
+    }
+    .red {
+        color: #E04D2B;
+    }
+    .green {
+        color: #72D376;
+    }
+    .yellow {
+        color: #FADB45;
+    }
+    .blue {
+        color: #3D8FC9;
+    }
+
+    section h1, h2, h3, h4, h5, h6 {
+        &.black-on-white {
+            color: #222;
+            text-shadow: 2px 2px 4px rgba(240,240,240,1.0);
+        }
+        &.white-on-black {
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(34,34,34,1.0);
+        }
+    }
+
+    section.intro {
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        ul {
+            list-style-type: none;
+            > li:first-child {
+                border-top: 1px solid #ddd;
+                padding-top: 10px;
+            }
+            > li {
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    section.jsdc2015 {
+
+        .jsdc2015_head {
+            margin-bottom: 40px;
+        }
+        .jsdc2015_subhead {
+            font-size: 2em;
+            line-height: 1.25;
+
+            .jsdc2015_build-with-javascript {
+                -webkit-transition: opacity .5s linear;
+                transition: opacity .5s linear;
+                font-weight: bold;
+            }
+        }
+    }
+
+    section.j5 {
+        a:hover {
+            color: #fff;
+        }
+        a {
+            color: #efefef;
+        }
+        img {
+          background: transparent;
+        }
+        .j5__site-head {
+            background: #2e2e2e;
+            color: #fff;
+            display: inline-block;
+            font-size: 2.8em;
+            padding: .2em .4em;
+            margin: 0 0 .25em 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .j5__site-subhead {
+            font-size: 1.6em;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        .j5__board-type {
+            -webkit-transition: opacity .5s linear;
+            transition: opacity .5s linear;
+        }
+    }
+
+    section.take-your-chance {
+        .float-text {
+            text-align: left;
+            font-size: 50%;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 4px 8px;
+        }
+        .take-your-chance-red {
+            font-size: 90%;
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            height: 400px;
+
+            .title {
+                margin: 20px 0;
+                color: #c7254e;
+                text-shadow: none;
+            }
+            .url {
+                font-size: 80%;
+            }
+        }
+        .take-your-chance-blue {
+            font-size: 90%;
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            height: 400px;
+
+            .title {
+                margin: 20px 0;
+                color: #337ab7;
+                text-shadow: none;
+            }
+            .url {
+                font-size: 80%;
+            }
+        }
+    }
+}
+
+// override
+.reveal {
+    pre {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1em;
+    }
+}
+
+@media (min-width: 45em) {
+    .reveal {
+        section.j5 {
+            .j5__site-subhead {
+                  font-size: 2.3em;
+            }
+        }
+    }
+}
+
+@media (min-width: 30em) {
+    .reveal {
+        section.j5 {
+            .j5__site-subhead {
+                  font-size: 2em;
+            }
+        }
+    }
+}

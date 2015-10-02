@@ -1,0 +1,23 @@
+{
+  "name": "jsdc2015-talk",
+  "version": "0.1.0",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "highlightjs": "~8.5.0",
+    "lodash": "~3.10.0",
+    "normalize-css": "~3.0.3"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/**"
+      ]
+    },
+    "highlightjs": {
+      "main": [
+        "highlight.pack.js",
+        "styles/*.css"
+      ]
+    }
+  }
+}

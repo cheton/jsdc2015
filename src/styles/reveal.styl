@@ -1,0 +1,109 @@
+.reveal section .brand
+  vertical-align: middle
+  h1
+    font-size: 100px
+  h3
+    font-size: 48px
+  h1, h3
+    font-weight: bold
+    line-height: 1
+    letter-spacing: -0.04em
+
+.reveal section.dark
+  h1, h2, h3, h4, h5, h6, blockquote, p, li
+    color: rgba(0, 0, 0, 0.8)
+
+h1, h2, h3, h4, h5, h6, p
+  .reveal &
+    text-transform: none
+    text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.5)
+  &.left
+    text-align: left
+  &.center
+    text-align: center
+  &.rigjt
+    text-align: right
+
+.reveal ol,
+.reveal ul
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 1em 1em;
+  >li >pre
+    margin-left: 0
+
+.light .reveal > .backgrounds
+  opacity: 0.55
+
+.reveal blockquote
+  width: 80%
+
+.reveal table th.center,
+.reveal table td.center
+  text-align: center
+
+.reveal pre
+  max-width: 100%;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+.reveal pre code
+  max-height: none;
+  font-size: 32px;
+  line-height: 36px;
+
+.reveal code
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+.reveal .hljs
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  -webkit-text-size-adjust: none;
+
+img
+  &.border
+    border: 1px solid #eee
+  .reveal section &
+    border: none
+    box-shadow: none
+  .reveal a:hover
+    box-shadow: 0 0 10px rgba(0,0,0,.15)
+
+.avatar
+  display: block
+  margin: 0 auto
+  width: 120px
+  height: 120px
+  border-radius: 120px
+  &-small
+    width: 70px
+    height: 70px
+
+.reveal section img
+  height: auto
+  vertical-align: middle
+  border: 0
+  &.logo-s
+    max-height: 100px
+    max-width: 100px
+  &.logo-m
+    max-height: 200px
+    max-width: 200px
+  &.logo-l
+    max-height: 400px
+    max-width: 400px
+  &.logo-xl
+    max-height: 600px
+    max-width: 600px
+
+/*
+.reveal .slides section[data-slide="branches"] .fragment.current-visible
+  opacity: 1
+.reveal .slides section[data-slide="branches"] .fragment.current-visible.current-fragment,
+  opacity: 1
+.reveal .slides section[data-slide="branches"] .fragment.visible
+  opacity: 0
+  display: none
+*/

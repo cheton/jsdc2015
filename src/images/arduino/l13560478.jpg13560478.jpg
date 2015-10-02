@@ -1,0 +1,11 @@
+--2015-09-30 02:48:22--  http://gd2.alicdn.com/imgextra/i2/13560478/T2BHP0XmFaXXXXXXXX_wget
+Resolving gd2.alicdn.com... 203.69.105.250, 203.69.105.240
+Connecting to gd2.alicdn.com|203.69.105.250|:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2015-09-30 02:48:22 ERROR 404: Not Found.
+
+--2015-09-30 02:48:22--  http://gd2.alicdn.com/imgextra/i2/13560478/T2BHP0XmFaXXXXXXXX_ls
+Reusing existing connection to gd2.alicdn.com:80.
+HTTP request sent, awaiting response... 404 Not Found
+2015-09-30 02:48:22 ERROR 404: Not Found.
+
