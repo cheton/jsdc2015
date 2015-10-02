@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Commercial UI Best Practices</title>
+<title>JSDC 2015 - Road to JavaScript Maker</title>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -46,6 +46,17 @@
                     </div>
                 </div>
             </div>
+            <aside class="notes">
+            各位JSDC的朋友大家好
+            相信大家應該有看到在講台前擺放的這些東西
+            這些都是自動化控制的機器
+            在開始今天的主題之前呢
+            我們先來個暖場
+            我要來用JavaScript控制這個機械手臂
+            <br>
+            相信大家看過後應該會比較有感覺了
+            接下來就開始今天的主題
+            </aside>
         </section>
 
         <section class="intro">
@@ -59,7 +70,20 @@
             </ul>
             <h2 class="fragment" style="color:#444">Why not combine them together?</h2>
             <aside class="notes">
-                <p>That's what I want to talk about today.</p>
+            過去早期一直都做跟底層相關的
+            例如 Linux Kernel/System Programming
+            後來因為個人興趣開始轉做專職的Frontend
+            平常熱愛木工，常常ＤＩＹ一些作品
+            尤其前陣子聽過webduino之後
+            開始重拾對電子電路的熱情
+            後來又想想
+            平常寫JavaScript
+            心中又有一個Maker魂
+            木工大小事對我來說也不是個問題
+            我是不是可以把這些東西全部融合在一起
+            這個就是我今天要講的主題
+            Road to JavaScript Maker
+            That's what I want to talk about today.
             </aside>
         </section>
 
@@ -70,28 +94,37 @@
             <div class="jsdc2015_subhead">
                 Build <span class="jsdc2015_build-with-javascript">Website</span> with JavaScript
             </div>
+            <aside class="notes">
+            大家應該都還記得今年JSDC的主題吧
+            You can build anything with JavaScript
+            </aside>
         </section>
 
         <section>
             <h1>JavaScript is Everywhere</h1>
             <img src="images/JavaScript_Everywhere.jpg" class="stretch">
             <aside class="notes">
-                <ul>
-                    <li>Web apps</li>
-                    <li>Web servers</li>
-                    <li>Database engines</li>
-                    <li>React-native on iOS and Android</li>
-                </ul>
+            其實JavaScript已經無所不在了
+            你可以用它來做WebApps, Web servers, Database engines
+            或是這一年正夯的 React-native
+            你可以用JavaScript去開發手機或平板上面的應用程式
+            而且同時也支援 iOS / Android 平台
             </aside>
         </section>
 
         <section data-background="images/IoT.png" data-background-size="100%">
             <aside class="notes">
-                It should be no surprise that JavaScript can also be used to control off-the-shelf hardware, circuits, and other electronics like the Arduino platform</p>
+            <p>這張圖是一個JavaScript在IoT上的應用</p>
+            <p>瀏覽器或手機透過Node.js當後台, 透過有線或無線的方式, 去控制微處理器</p>
+            <p>你人不用親自走到開關面前按下去
+            你可以從遠端甚至是世界各地去操控
+            因為網路
+            世界上所有的東西都可以連結在一起</p>
+            It should be no surprise that JavaScript can also be used to control off-the-shelf hardware, circuits, and other electronics like the Arduino platform
             </aside>
         </section>
 
-        <section data-background="#333">
+        <section data-background="#000">
             <img src="images/Programming_flying_robots_with_Node.js.png" class="stretch">
             <aside class="notes">
                 http://2012.lxjs.org/
@@ -102,8 +135,11 @@
         </section>
 
         <section>
-            <section>
-                <pre><code data-trim class="js">
+            <iframe data-src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
+        </section>
+
+        <section>
+            <pre><code data-trim class="js">
 var arDrone = require('ar-drone');
 var client = arDrone.createClient();
 
@@ -120,11 +156,11 @@ client
         this.stop();
         this.land();
     });
-                </code></pre>
-            </section>
-            <section>
-                <iframe src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
-            </section>
+            </code></pre>
+            <aside class="notes">
+            JavaScript與生俱來的非同步事件處理機制
+            我們要對硬體做自動化控制的這件事情就變得非常簡單
+            </aside>
         </section>
 
         <section class="text-align-left">
@@ -140,8 +176,9 @@ client
                 </div>
             </div>
             <aside class="notes">
-                <span>https://en.wikipedia.org/wiki/Jeff_Atwood</span>
-                <p>Jeff Atwood is an American software developer, author, blogger, and entrepreneur. He is known for the programming blog Coding Horror, and is the co-founder of the question-and-answer website Stack Overflow and the Stack Exchange Network.</p>
+                Jeff Atwood 也是stackoverflow的共同創辦人
+                Any application that can be written in JavaScript, will eventually be written in JavaScript.
+                所以當有一天我們可以用JavaScript來控制整個物聯網的時候, 也不會覺得很意外
             </aside>
         </section>
 
@@ -183,7 +220,8 @@ client
                 </div>
             </div>
             <aside class="notes">
-                <a href="https://www.arduino.cc/">https://www.arduino.cc/</a>
+                <p>所以到底什麼是Arduino呢</p>
+                <p>這邊我快速問一下, 有在玩Arduino的舉手讓我知道一下</p>
                 <p>Arduino是個開放原始碼的單晶片微處理器，它起源於義大利，一開始是為了教學用途，但因為操作簡單一般人很容易就上手，很快地就在世界上流行起來。</p>
                 <p>你可以用Arduino接上任何裝置和傳感器，例如LED、馬達、液晶螢幕，然後搭配自動化控制的程式，就可以輕鬆地操控機器人、四軸飛行器、機械手臂或CNC。</p>
             </aside>
@@ -192,6 +230,10 @@ client
         <section>
             <img src="images/arduino/illu_what_is-board.png">
             <h2 style="color: #007e83; text-shadow: none;">Arduino Board</h2>
+            <aside class="notes">
+                <p>一開始接觸Arduino有兩個是你需要知道的, 首先是它的控制板</p>
+                <p>因為Arduino控制板的型號太多了，這邊先挑兩個大多數人比較常用的來做介紹</p>
+            </aside>
         </section>
         <section>
             <section>
@@ -203,16 +245,6 @@ client
                 <img src="images/arduino/ArduinoUno_R3_Back.jpg" class="stretch">
             </section>
             <aside class="notes">
-                The components of Arduino Uno board are described below (clockwise from bottom left):
-                * Power Connector: This is used to power your Arduino when it is not plugged into a USB port for power. The power connector can accept voltages from 7 to 12 volts, so the standard 9-volt battery is good enough for powering the board.
-                * TX and RX LEDs: These two LEDs (light emitting diodes) indicate communication between your computer and your Arduino. You can expect those LEDs to flicker rapidly when you are uploading an Arduino program, aka sketch, to the board.
-                * USB Port: The port connects your Arduino to a computer and it is used for powering your Arduino as well as uploading sketches to it.
-                Reset Button: The button is used to reset the on-board microcontroller
-                * Digital Input/Output: The pins are the primary way Arduino interfaces with external components and systems. The pins are used to both read and write digital data using digitalRead() and digitalWrite() functions.
-                * Power LED: The power LED indicates that your Arduino is getting power.
-                * On-board LED: The on-board LED is internally connected to pin 13 of your Arduino Uno. The LED comes in handy for writing your first sketch as it is already built-into the board and you don’t have to connect any external component.
-                * Microcontroller: The official Arduino Uno R3 board that is based on the ATMEGA328P-PU microcontroller of the Atmel AVR family of microcontrollers. The microcontroller is the heart of your Arduino Uno board.
-                * Analog Input: These pins are used to read analog voltages from sensors using the analogRead() function.
             </aside>
         </section>
 
@@ -342,11 +374,8 @@ client
                 </div>
             </div>
             <aside class="notes">
-                Node.js Communicating with Arduino
-                <h1>Johnny-Five</h1>
-                <p>Johnny-Five is a robotics and IoT programming framework based on the Firmata protocol. Johnny-Five programs can be written for Arduino (all models), Electric Imp, Beagle Bone, Intel Galileo & Edison, Linino One, Pinoccio, pcDuino3, Raspberry Pi, Spark Core, TI Launchpad and more!</p>
-                <h1>Cylon.js</h1>
-                <p>Cylon.js is a JavaScript framework for robotics, physical computing, and the Internet of Things. It makes it incredibly easy to command robots and devices. It supports many platforms such as: ARDrone, Sphero, Philips Hue, LeapMotion, Raspberry Pi, Arduino, Nest, OpenCV, Pebble, Skynet and much more…</p>
+                <p>http://johnny-five.io/</p>
+                <p>http://cylonjs.com/documentation/getting-started/</p>
             </aside>
         </section>
 
@@ -371,6 +400,11 @@ board.on('error', function(err) {
 
         <section data-background="images/The_Matrix.jpg" data-transition="zoom">
             <h1 class="white-on-black" style="min-height: 100vh">Take Your Chance</h1>
+            <aside class="notes">
+                你如果要自己去處理時脈，那真的會搞死自己！
+                為了讓自己的生活好過一點，
+                我們覺得挑簡單一點的
+            </aside>
         </section>
 
         <section class="j5" style="text-align:left;" data-background="images/johnny-five/pcb.jpg" data-background-size="auto" data-background-repeat="repeat" data-transition="zoom">
@@ -461,6 +495,9 @@ npm install johnny-five
         <section>
             <p style="position: absolute; right: 350px; top: 42px;">http://johnny-five.io/examples/</p>
             <img src="images/johnny-five/examples.png" class="stretch">
+            <aside class="notes">
+                有各類的裝置和傳感器的範例，而且範例都有提供電路圖唷，很適合已經把學校教過的電子電路學通通忘掉的的我們
+            </aside>
         </section>
 
         <section>
@@ -556,6 +593,11 @@ board.on('ready', function() {
         <section>
             <h1>Example: Servo</h1>
             <img src="images/johnny-five/breadboard/external-servo-power.png" class="stretch">
+            <aside class="notes">
+                <p>伺服馬達應用的場合還滿多的</p>
+                <p>例如模型飛機和模型船的槳葉控制, 還有我們一開始demo的機械手臂</p>
+                <p>舉凡天上飛的/地上玩的/水裡游的, 都有它的應用場合</p>
+            </aside>
         </section>
 
         <section>
@@ -588,6 +630,7 @@ board.on('ready', function() {
             <h1>Example: LCD - I²C</h1>
             <img src="images/johnny-five/breadboard/lcd-i2c-PCF8574.png" class="stretch">
             <aside class="notes">
+                <p>大家搭乘交通工具的時候都可以看到走馬燈播放站名, 這些都是LCD的應用場合</p>
                 Inter-integrated Circuit (I²C)
                 只需要兩條信號線：串列資料線(SDA)及串列時脈線(SCL)
             </aside>
@@ -631,7 +674,7 @@ board.on('ready', function() {
 
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
-            <h2>https://github.com/cheton/iot-weather-display</h2>
+            <h2><a href="https://github.com/cheton/iot-weather-display" target="_blank">https://github.com/cheton/iot-weather-display</a></h2>
         </section>
 
         <section>
@@ -688,7 +731,7 @@ request(url, function(err, rsp, body) {
 
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
-            <h2>https://github.com/cheton/robotarm</h2>
+            <h2><a href="https://github.com/cheton/robotarm" target="_blank">https://github.com/cheton/robotarm</a></h2>
         </section>
 
         <section>
@@ -722,6 +765,9 @@ board.on('ready', function() {
     });
 });
             </code></pre>
+            <aside class="notes">
+            執行程式碼看座標數據
+            </aside>
         </section>
 
         <section>
@@ -818,11 +864,16 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>經過三個月的努力後...</h1>
+            <h1>經過三個月不眠不休的努力過後...</h1>
         </section>
 
         <section data-background="#000" data-transition="zoom">
             <img src="images/woodworking/cnc.jpg" class="stretch">
+        </section>
+
+        <section>
+            <h1>每天回家工作到半夜</h1>
+            <h1>老婆都快要瘋掉了XD</h1>
         </section>
 
         <section data-transition="zoom">
@@ -863,11 +914,12 @@ board.on('ready', function() {
 
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
-            <h2>https://github.com/grbl/grbl</h2>
-            <h2>https://github.com/grbl/grbl/wiki</h2>
+            <h2><a href="https://github.com/grbl/grbl" target="_blank">https://github.com/grbl/grbl</a></h2>
+            <h2><a href="https://github.com/grbl/grbl/wiki" target="_blank">https://github.com/grbl/grbl/wiki</a></h2>
             <img src="images/logo/Grbl-logo-250px.png" class="stretch">
             <p>An open source, embedded, high performance g-code-parser and CNC milling controller written in optimized C that will run on a straight Arduino.</p>
             <aside class="notes">
+                <p>大多數開源的3D印表機都可以看到它的身影</p>
                 <p>Most open source 3D printers have Grbl in their hearts. It has been adapted for use in hundreds of projects including laser cutters, automatic hand writers, hole drillers, graffiti painters and oddball drawing machines. Due to its performance, simplicity and frugal hardware requirements Grbl has grown into a little open source phenomenon.</p>
                 <p>In 2009, Simen Svale Skogsrud (http://bengler.no/grbl) graced the open-source community by writing and releasing the early versions of Grbl to everyone (inspired by the Arduino GCode Interpreter by Mike Ellery). Since 2011, Grbl is pushing ahead as a community-driven open-source project under the pragmatic leadership of Sungeun K. Jeon Ph.D. (@chamnit).</p>
             </aside>
@@ -906,7 +958,7 @@ board.on('ready', function() {
 
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
-            <h2>https://github.com/cheton/cnc.js</h2>
+            <h2><a href="https://github.com/cheton/cnc.js" target="_blank">https://github.com/cheton/cnc.js</a></h2>
             <br>
             <p>Powered By<p>
             <ul>
@@ -1078,7 +1130,9 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>The Internet of Things (IoT)<br>will be created by the people<br>who know the Internet best.</h1>
+            <h1>The Internet of Things (IoT) will be created by the people who know the Internet best.</h1>
+            <br>
+            <h1>機會是留給準備好的人！</h1>
         </section>
 
     </div>
@@ -1087,8 +1141,8 @@ board.on('ready', function() {
 <script src="vendor/lodash/lodash.js"></script>
 <script src="vendor/reveal/lib/js/head.min.js"></script>
 <script src="vendor/reveal/js/reveal.js"></script>
-<script src="scripts/app.js"></script>
 <script src="vendor/highlightjs/highlight.pack.js"></script>
+<script src="scripts/app.js"></script>
 <script>
 hljs.initHighlightingOnLoad();
 
