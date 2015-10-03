@@ -120,7 +120,9 @@ Reveal.initialize({
         //{ src: 'vendor/reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
 
         // MathJax
-        { src: 'vendor/reveal/plugin/math/math.js', async: true }
+        { src: 'vendor/reveal/plugin/math/math.js', async: true },
+
+        { src: 'vendor/reveal/plugin/print/pdf.js', async: true }
     ]
 });
 
