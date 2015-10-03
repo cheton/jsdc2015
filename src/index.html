@@ -58,9 +58,6 @@
                 <li class="fragment"><h3 class="blue">DIY electronics: Arduino, Robotics<h3></li>
             </ul>
             <h2 class="fragment" style="color:#444">Why not combine them together?</h2>
-            <aside class="notes">
-                <p>That's what I want to talk about today.</p>
-            </aside>
         </section>
 
         <section class="jsdc2015">
@@ -75,35 +72,21 @@
         <section>
             <h1>JavaScript is Everywhere</h1>
             <img src="images/JavaScript_Everywhere.jpg" class="stretch">
-            <aside class="notes">
-                <ul>
-                    <li>Web apps</li>
-                    <li>Web servers</li>
-                    <li>Database engines</li>
-                    <li>React-native on iOS and Android</li>
-                </ul>
-            </aside>
         </section>
 
         <section data-background="images/IoT.png" data-background-size="100%">
-            <aside class="notes">
-                It should be no surprise that JavaScript can also be used to control off-the-shelf hardware, circuits, and other electronics like the Arduino platform</p>
-            </aside>
         </section>
 
-        <section data-background="#333">
+        <section data-background="#000">
             <img src="images/Programming_flying_robots_with_Node.js.png" class="stretch">
-            <aside class="notes">
-                http://2012.lxjs.org/
-                September 28+29, 2012
-                Lisbon, Portugal
-                A 2-day not-for-profit by-the-community and for-the-community international conference about the New Worlds of JavaScript.
-            </aside>
         </section>
 
         <section>
-            <section>
-                <pre><code data-trim class="js">
+            <iframe data-src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
+        </section>
+
+        <section>
+            <pre><code data-trim class="js">
 var arDrone = require('ar-drone');
 var client = arDrone.createClient();
 
@@ -120,11 +103,7 @@ client
         this.stop();
         this.land();
     });
-                </code></pre>
-            </section>
-            <section>
-                <iframe src="https://www.youtube.com/embed/jl5v3bsMH_E?start=1080" frameborder="0" allowfullscreen class="stretch"></iframe>
-            </section>
+            </code></pre>
         </section>
 
         <section class="text-align-left">
@@ -139,10 +118,6 @@ client
                     <img src="images/logo/stackoverflow-logo.png">
                 </div>
             </div>
-            <aside class="notes">
-                <span>https://en.wikipedia.org/wiki/Jeff_Atwood</span>
-                <p>Jeff Atwood is an American software developer, author, blogger, and entrepreneur. He is known for the programming blog Coding Horror, and is the co-founder of the question-and-answer website Stack Overflow and the Stack Exchange Network.</p>
-            </aside>
         </section>
 
         <section data-transition="zoom">
@@ -182,11 +157,6 @@ client
                     </div>
                 </div>
             </div>
-            <aside class="notes">
-                <a href="https://www.arduino.cc/">https://www.arduino.cc/</a>
-                <p>Arduino是個開放原始碼的單晶片微處理器，它起源於義大利，一開始是為了教學用途，但因為操作簡單一般人很容易就上手，很快地就在世界上流行起來。</p>
-                <p>你可以用Arduino接上任何裝置和傳感器，例如LED、馬達、液晶螢幕，然後搭配自動化控制的程式，就可以輕鬆地操控機器人、四軸飛行器、機械手臂或CNC。</p>
-            </aside>
         </section>
 
         <section>
@@ -202,18 +172,6 @@ client
                 <h3>Arduino Uno R3 (Back)</h2>
                 <img src="images/arduino/ArduinoUno_R3_Back.jpg" class="stretch">
             </section>
-            <aside class="notes">
-                The components of Arduino Uno board are described below (clockwise from bottom left):
-                * Power Connector: This is used to power your Arduino when it is not plugged into a USB port for power. The power connector can accept voltages from 7 to 12 volts, so the standard 9-volt battery is good enough for powering the board.
-                * TX and RX LEDs: These two LEDs (light emitting diodes) indicate communication between your computer and your Arduino. You can expect those LEDs to flicker rapidly when you are uploading an Arduino program, aka sketch, to the board.
-                * USB Port: The port connects your Arduino to a computer and it is used for powering your Arduino as well as uploading sketches to it.
-                Reset Button: The button is used to reset the on-board microcontroller
-                * Digital Input/Output: The pins are the primary way Arduino interfaces with external components and systems. The pins are used to both read and write digital data using digitalRead() and digitalWrite() functions.
-                * Power LED: The power LED indicates that your Arduino is getting power.
-                * On-board LED: The on-board LED is internally connected to pin 13 of your Arduino Uno. The LED comes in handy for writing your first sketch as it is already built-into the board and you don’t have to connect any external component.
-                * Microcontroller: The official Arduino Uno R3 board that is based on the ATMEGA328P-PU microcontroller of the Atmel AVR family of microcontrollers. The microcontroller is the heart of your Arduino Uno board.
-                * Analog Input: These pins are used to read analog voltages from sensors using the analogRead() function.
-            </aside>
         </section>
 
         <section>
@@ -256,9 +214,6 @@ client
                 <img src="images/arduino/Arduino_IDE_Firmata.png" class="stretch">
                 <h2 style="position:absolute; top: 40%; left: 60%;">Firmata</h2>
             </section>
-            <aside class="notes">
-                Arduino 有一個非常容易上手的 IDE 開發環境，請先到 Arduino 的官方網站下載 Arduino Software，它同時支援 Windows、Mac OS X 與各種的 Linux 系統，支援性非常好，請依照自己的系統類型來安裝。
-            </aside>
         </section>
 
         <section>
@@ -341,13 +296,6 @@ client
                     </div>
                 </div>
             </div>
-            <aside class="notes">
-                Node.js Communicating with Arduino
-                <h1>Johnny-Five</h1>
-                <p>Johnny-Five is a robotics and IoT programming framework based on the Firmata protocol. Johnny-Five programs can be written for Arduino (all models), Electric Imp, Beagle Bone, Intel Galileo & Edison, Linino One, Pinoccio, pcDuino3, Raspberry Pi, Spark Core, TI Launchpad and more!</p>
-                <h1>Cylon.js</h1>
-                <p>Cylon.js is a JavaScript framework for robotics, physical computing, and the Internet of Things. It makes it incredibly easy to command robots and devices. It supports many platforms such as: ARDrone, Sphero, Philips Hue, LeapMotion, Raspberry Pi, Arduino, Nest, OpenCV, Pebble, Skynet and much more…</p>
-            </aside>
         </section>
 
         <section>
@@ -385,16 +333,6 @@ board.on('error', function(err) {
             <div style="position: absolute; right: 0; bottom: 0;">
                 <img src="images/johnny-five/heres-johnny.png">
             </div>
-
-            <aside class="notes">
-                <ul>
-                    <li>Write in JavaScript and control Arduino</li>
-                    <li>Using Firmata Protocol to communicate with Arduino</li>
-                    <li>Can be used with Accelerometer, Button, Compass, Led, Joystick, Motor, Ultrasonic (Ping), Proximity, IR, Range IR, Sendor, Servo, Sonar</li>
-                    <li>Running on a Node.js server</li>
-                    <li>Excellent for internet and cloud programming</li>
-                </ul>
-            </aside>
         </section>
 
         <section data-background="images/johnny-five/pcb.jpg" data-background-size="auto" data-background-repeat="repeat">
@@ -466,10 +404,6 @@ npm install johnny-five
         <section>
             <h1>Example: LED</h1>
             <img src="images/johnny-five/breadboard/led-13.gif">
-            <aside class="notes">
-                <p>LED on pin 13 (Arduino UNO)</p>
-                <p>Basic example with LED inserted directly into pin 13</p>
-            </aside>
         </section>
 
         <section>
@@ -515,13 +449,6 @@ $ node led.js
 &gt;&gt; off() // will turn off the LED
                 </code></pre>
             </section>
-            <aside class="notes">
-                Read-Eval-Print-Loop (REPL)
-                Read - Reads user's input, parse the input into JavaScript data-structure and stores in memory.
-                Eval - Takes and evaluates the data structure
-                Print - Prints the result
-                Loop - Loops the above command until user press ctrl-c twice.
-            </aside>
         </section>
 
         <section>
@@ -587,10 +514,6 @@ board.on('ready', function() {
         <section>
             <h1>Example: LCD - I²C</h1>
             <img src="images/johnny-five/breadboard/lcd-i2c-PCF8574.png" class="stretch">
-            <aside class="notes">
-                Inter-integrated Circuit (I²C)
-                只需要兩條信號線：串列資料線(SDA)及串列時脈線(SCL)
-            </aside>
         </section>
 
         <section>
@@ -631,7 +554,7 @@ board.on('ready', function() {
 
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
-            <h2>https://github.com/cheton/iot-weather-display</h2>
+            <h2><a href="https://github.com/cheton/iot-weather-display" target="_blank">https://github.com/cheton/iot-weather-display</a></h2>
         </section>
 
         <section>
@@ -688,7 +611,7 @@ request(url, function(err, rsp, body) {
 
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
-            <h2>https://github.com/cheton/robotarm</h2>
+            <h2><a href="https://github.com/cheton/robotarm" target="_blank">https://github.com/cheton/robotarm</a></h2>
         </section>
 
         <section>
@@ -696,7 +619,8 @@ request(url, function(err, rsp, body) {
             <img src="images/johnny-five/breadboard/joystick-sparkfun.png" class="stretch">
         </section>
 
-        <section data-background-video="videos/robotarm-joystick.mp4">
+        <section>
+            <iframe data-src="https://www.youtube.com/embed/YcCUFHwwKA8" frameborder="0" allowfullscreen class="stretch"></iframe>
         </section>
 
         <section>
@@ -728,7 +652,8 @@ board.on('ready', function() {
             <h1>Robot Arm with Automation</h1>
         </section>
 
-        <section data-background-video="videos/robotarm-automation.mp4">
+        <section>
+            <iframe src="https://www.youtube.com/embed/XmPtqA6iZSI" frameborder="0" allowfullscreen class="stretch"></iframe>
         </section>
 
         <section>
@@ -808,9 +733,6 @@ board.on('ready', function() {
 
         <section data-background="#000" data-transition="zoom">
             <img src="images/woodworking/cotton-reel-holder.jpg" class="stretch">
-            <aside class="notes">
-                線捲盒
-            </aside>
         </section>
 
         <section data-transition="zoom">
@@ -818,11 +740,16 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>經過三個月的努力後...</h1>
+            <h1>經過三個月不眠不休的努力過後...</h1>
         </section>
 
         <section data-background="#000" data-transition="zoom">
             <img src="images/woodworking/cnc.jpg" class="stretch">
+        </section>
+
+        <section>
+            <h1>每天回家工作到半夜</h1>
+            <h1>老婆都快要瘋掉了XD</h1>
         </section>
 
         <section data-transition="zoom">
@@ -863,22 +790,15 @@ board.on('ready', function() {
 
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
-            <h2>https://github.com/grbl/grbl</h2>
-            <h2>https://github.com/grbl/grbl/wiki</h2>
+            <h2><a href="https://github.com/grbl/grbl" target="_blank">https://github.com/grbl/grbl</a></h2>
+            <h2><a href="https://github.com/grbl/grbl/wiki" target="_blank">https://github.com/grbl/grbl/wiki</a></h2>
             <img src="images/logo/Grbl-logo-250px.png" class="stretch">
             <p>An open source, embedded, high performance g-code-parser and CNC milling controller written in optimized C that will run on a straight Arduino.</p>
-            <aside class="notes">
-                <p>Most open source 3D printers have Grbl in their hearts. It has been adapted for use in hundreds of projects including laser cutters, automatic hand writers, hole drillers, graffiti painters and oddball drawing machines. Due to its performance, simplicity and frugal hardware requirements Grbl has grown into a little open source phenomenon.</p>
-                <p>In 2009, Simen Svale Skogsrud (http://bengler.no/grbl) graced the open-source community by writing and releasing the early versions of Grbl to everyone (inspired by the Arduino GCode Interpreter by Mike Ellery). Since 2011, Grbl is pushing ahead as a community-driven open-source project under the pragmatic leadership of Sungeun K. Jeon Ph.D. (@chamnit).</p>
-            </aside>
         </section>
 
         <section>
             <h2>Grbl's Pins</h2>
             <img src="images/demo/cnc/Arduino_GRBL.png" class="stretch">
-            <aside class="notes">
-                https://github.com/grbl/grbl/wiki/Connecting-Grbl
-            </aside>
         </section>
 
         <section>
@@ -906,7 +826,7 @@ board.on('ready', function() {
 
         <section>
             <h2><img src="images/logo/github-128x128.png">GitHub</h2>
-            <h2>https://github.com/cheton/cnc.js</h2>
+            <h2><a href="https://github.com/cheton/cnc.js" target="_blank">https://github.com/cheton/cnc.js</a></h2>
             <br>
             <p>Powered By<p>
             <ul>
@@ -935,7 +855,14 @@ board.on('ready', function() {
         </section>
 
         <section>
-            <h1>Q&A</h1>
+            <section>
+                <h1>Q&A</h1>
+            </section>
+            <section>
+                <h1>The Internet of Things (IoT) will be created by the people who know the Internet best.</h1>
+                <br>
+                <h1>機會是留給準備好的人！</h1>
+            </section>
         </section>
 
         <section>
@@ -955,11 +882,6 @@ board.on('ready', function() {
                         <li><a href="http://2xod.com/articles/Arduino_Wifi_With_Hi_Flying_HF-LPT100_or_USR-WIFI232/" target="_blank">Arduino Wifi With Hi Flying HF-LPT100/USR WIFI232-T</a></li>
                     </ul>
                 </div>
-                
-                <aside class="notes">
-                    <a href="https://gist.github.com/ajfisher/1fdbcbbf96b7f2ba73cd" target="_blank">A NodeBot Over WiFi</a>
-                    <a href="http://2xod.com/articles/Arduino_Wifi_With_Hi_Flying_HF-LPT100_or_USR-WIFI232/" target="_blank">Arduino Wifi With Hi Flying HF-LPT100/USR WIFI232-T</a>
-                </aside>
             </section>
 
             <section>
@@ -1042,18 +964,10 @@ board.on('ready', function() {
             <section>
                 <h1>The Firmata library for Arduino</h1>
                 <h2><a href="https://www.arduino.cc/en/Reference/Firmata" target="_blank">https://www.arduino.cc/en/Reference/Firmata</a></h2>
-
-                <aside class="notes">
-                    <p>The Firmata library implements the Firmata protocol for communicating with software on the host computer. This allows you to write custom firmware without having to create your own protocol and objects for the programming environment that you are using.</p>
-                </aside>
             </section>
             <section>
                 <h2>Example</h2>
                 <img src="images/arduino/Arduino_Firmata_Example.png">
-
-                <aside class="notes">
-                    <p>This example shows how to send and receive analog messages using Firmata.</p>
-                </aside>
             </section>
             <section>
                 <h1>The Firmata library for Node.js</h1>
@@ -1077,18 +991,14 @@ board.on('ready', function() {
 
         </section>
 
-        <section>
-            <h1>The Internet of Things (IoT)<br>will be created by the people<br>who know the Internet best.</h1>
-        </section>
-
     </div>
 </div>
 <script src="vendor/jquery/dist/jquery.js"></script>
 <script src="vendor/lodash/lodash.js"></script>
 <script src="vendor/reveal/lib/js/head.min.js"></script>
 <script src="vendor/reveal/js/reveal.js"></script>
-<script src="scripts/app.js"></script>
 <script src="vendor/highlightjs/highlight.pack.js"></script>
+<script src="scripts/app.js"></script>
 <script>
 hljs.initHighlightingOnLoad();
 
