@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
 <link rel="stylesheet" href="vendor/reveal/css/reveal.css">
 <link rel="stylesheet" href="vendor/reveal/css/theme/white.css">
-<link rel="stylesheet" href="vendor/reveal/css/print/pdf.css">
 <link rel="stylesheet" href="vendor/highlightjs/styles/github.css">
 <!--[if lt IE 9]>
 <script src="vendor/reveal/lib/js/html5shiv.js"></script>
@@ -47,17 +46,6 @@
                     </div>
                 </div>
             </div>
-            <aside class="notes">
-            各位JSDC的朋友大家好
-            相信大家應該有看到在講台前擺放的這些東西
-            這些都是自動化控制的機器
-            在開始今天的主題之前呢
-            我們先來個暖場
-            我要來用JavaScript控制這個機械手臂
-            <br>
-            相信大家看過後應該會比較有感覺了
-            接下來就開始今天的主題
-            </aside>
         </section>
 
         <section class="intro">
@@ -70,29 +58,6 @@
                 <li class="fragment"><h3 class="blue">DIY electronics: Arduino, Robotics<h3></li>
             </ul>
             <h2 class="fragment" style="color:#444">Why not combine them together?</h2>
-            <aside class="notes">
-                <p>
-                過去早期一直都做跟底層相關的
-                例如 Linux Kernel/System Programming
-                後來因為個人興趣開始轉做專職的Frontend
-                </p>
-                <p>
-                平常熱愛木工，常常ＤＩＹ一些作品
-                </p>
-                <p>
-            尤其前陣子聽過webduino之後
-            開始重拾對電子電路的熱情
-                </p>
-                <p>
-            後來又想想
-            平常寫JavaScript
-            心中又有一個Maker魂
-            木工大小事對我來說也不是個問題
-            我是不是可以把這些東西全部融合在一起
-            這個就是我今天要講的主題
-            Road to JavaScript Maker
-                </p>
-            </aside>
         </section>
 
         <section class="jsdc2015">
@@ -102,44 +67,18 @@
             <div class="jsdc2015_subhead">
                 Build <span class="jsdc2015_build-with-javascript">Website</span> with JavaScript
             </div>
-            <aside class="notes">
-            大家應該都還記得今年JSDC的主題吧
-            總結就是這一句：You can build anything with JavaScript
-            </aside>
         </section>
 
         <section>
             <h1>JavaScript is Everywhere</h1>
             <img src="images/JavaScript_Everywhere.jpg" class="stretch">
-            <aside class="notes">
-            其實JavaScript已經無所不在了
-            你可以用它來做WebApps, Web servers, Database engines
-            或是這一年正夯的 React-native
-            你可以用JavaScript去開發手機或平板上面的應用程式
-            而且同時也支援 iOS / Android 平台
-            </aside>
         </section>
 
         <section data-background="images/IoT.png" data-background-size="100%">
-            <aside class="notes">
-            <p>這張圖是一個JavaScript在IoT上的應用</p>
-            <p>瀏覽器或手機透過Node.js當後台, 透過有線或無線的方式, 去控制微處理器</p>
-            <p>你人不用親自走到開關面前按下去
-            你可以從遠端甚至是世界各地去操控
-            因為網路
-            世界上所有的東西都可以連結在一起</p>
-            It should be no surprise that JavaScript can also be used to control off-the-shelf hardware, circuits, and other electronics like the Arduino platform
-            </aside>
         </section>
 
         <section data-background="#000">
             <img src="images/Programming_flying_robots_with_Node.js.png" class="stretch">
-            <aside class="notes">
-                http://2012.lxjs.org/
-                September 28+29, 2012
-                Lisbon, Portugal
-                A 2-day not-for-profit by-the-community and for-the-community international conference about the New Worlds of JavaScript.
-            </aside>
         </section>
 
         <section>
@@ -165,10 +104,6 @@ client
         this.land();
     });
             </code></pre>
-            <aside class="notes">
-            JavaScript與生俱來的非同步事件處理機制
-            我們要對硬體做自動化控制的這件事情就變得非常簡單
-            </aside>
         </section>
 
         <section class="text-align-left">
@@ -183,11 +118,6 @@ client
                     <img src="images/logo/stackoverflow-logo.png">
                 </div>
             </div>
-            <aside class="notes">
-                Jeff Atwood 也是stackoverflow的共同創辦人
-                Any application that can be written in JavaScript, will eventually be written in JavaScript.
-                所以當有一天我們可以用JavaScript來控制整個物聯網的時候, 也不會覺得很意外
-            </aside>
         </section>
 
         <section data-transition="zoom">
@@ -227,21 +157,11 @@ client
                     </div>
                 </div>
             </div>
-            <aside class="notes">
-                <p>所以到底什麼是Arduino呢</p>
-                <p>這邊我快速問一下, 有在玩Arduino的舉手讓我知道一下</p>
-                <p>Arduino是個開放原始碼的單晶片微處理器，它起源於義大利，一開始是為了教學用途，但因為操作簡單一般人很容易就上手，很快地就在世界上流行起來。</p>
-                <p>你可以用Arduino接上任何裝置和傳感器，例如LED、馬達、液晶螢幕，然後搭配自動化控制的程式，就可以輕鬆地操控機器人、四軸飛行器、機械手臂或CNC。</p>
-            </aside>
         </section>
 
         <section>
             <img src="images/arduino/illu_what_is-board.png">
             <h2 style="color: #007e83; text-shadow: none;">Arduino Board</h2>
-            <aside class="notes">
-                <p>一開始接觸Arduino有兩個是你需要知道的, 首先是它的控制板</p>
-                <p>因為Arduino控制板的型號太多了，這邊先挑兩個大多數人比較常用的來做介紹</p>
-            </aside>
         </section>
         <section>
             <section>
@@ -252,8 +172,6 @@ client
                 <h3>Arduino Uno R3 (Back)</h2>
                 <img src="images/arduino/ArduinoUno_R3_Back.jpg" class="stretch">
             </section>
-            <aside class="notes">
-            </aside>
         </section>
 
         <section>
@@ -296,9 +214,6 @@ client
                 <img src="images/arduino/Arduino_IDE_Firmata.png" class="stretch">
                 <h2 style="position:absolute; top: 40%; left: 60%;">Firmata</h2>
             </section>
-            <aside class="notes">
-                Arduino 有一個非常容易上手的 IDE 開發環境，請先到 Arduino 的官方網站下載 Arduino Software，它同時支援 Windows、Mac OS X 與各種的 Linux 系統，支援性非常好，請依照自己的系統類型來安裝。
-            </aside>
         </section>
 
         <section>
@@ -381,10 +296,6 @@ client
                     </div>
                 </div>
             </div>
-            <aside class="notes">
-                <p>http://johnny-five.io/</p>
-                <p>http://cylonjs.com/documentation/getting-started/</p>
-            </aside>
         </section>
 
         <section>
@@ -408,11 +319,6 @@ board.on('error', function(err) {
 
         <section data-background="images/The_Matrix.jpg" data-transition="zoom">
             <h1 class="white-on-black" style="min-height: 100vh">Take Your Chance</h1>
-            <aside class="notes">
-                你如果要自己去處理時脈，那真的會搞死自己！
-                為了讓自己的生活好過一點，
-                我們覺得挑簡單一點的
-            </aside>
         </section>
 
         <section class="j5" style="text-align:left;" data-background="images/johnny-five/pcb.jpg" data-background-size="auto" data-background-repeat="repeat" data-transition="zoom">
@@ -427,16 +333,6 @@ board.on('error', function(err) {
             <div style="position: absolute; right: 0; bottom: 0;">
                 <img src="images/johnny-five/heres-johnny.png">
             </div>
-
-            <aside class="notes">
-                <ul>
-                    <li>Write in JavaScript and control Arduino</li>
-                    <li>Using Firmata Protocol to communicate with Arduino</li>
-                    <li>Can be used with Accelerometer, Button, Compass, Led, Joystick, Motor, Ultrasonic (Ping), Proximity, IR, Range IR, Sendor, Servo, Sonar</li>
-                    <li>Running on a Node.js server</li>
-                    <li>Excellent for internet and cloud programming</li>
-                </ul>
-            </aside>
         </section>
 
         <section data-background="images/johnny-five/pcb.jpg" data-background-size="auto" data-background-repeat="repeat">
@@ -503,18 +399,11 @@ npm install johnny-five
         <section>
             <p style="position: absolute; right: 350px; top: 42px;">http://johnny-five.io/examples/</p>
             <img src="images/johnny-five/examples.png" class="stretch">
-            <aside class="notes">
-                有各類的裝置和傳感器的範例，而且範例都有提供電路圖唷，很適合已經把學校教過的電子電路學通通忘掉的的我們
-            </aside>
         </section>
 
         <section>
             <h1>Example: LED</h1>
             <img src="images/johnny-five/breadboard/led-13.gif">
-            <aside class="notes">
-                <p>LED on pin 13 (Arduino UNO)</p>
-                <p>Basic example with LED inserted directly into pin 13</p>
-            </aside>
         </section>
 
         <section>
@@ -560,13 +449,6 @@ $ node led.js
 &gt;&gt; off() // will turn off the LED
                 </code></pre>
             </section>
-            <aside class="notes">
-                Read-Eval-Print-Loop (REPL)
-                Read - Reads user's input, parse the input into JavaScript data-structure and stores in memory.
-                Eval - Takes and evaluates the data structure
-                Print - Prints the result
-                Loop - Loops the above command until user press ctrl-c twice.
-            </aside>
         </section>
 
         <section>
@@ -601,11 +483,6 @@ board.on('ready', function() {
         <section>
             <h1>Example: Servo</h1>
             <img src="images/johnny-five/breadboard/external-servo-power.png" class="stretch">
-            <aside class="notes">
-                <p>伺服馬達應用的場合還滿多的</p>
-                <p>例如模型飛機和模型船的槳葉控制, 還有我們一開始demo的機械手臂</p>
-                <p>舉凡天上飛的/地上玩的/水裡游的, 都有它的應用場合</p>
-            </aside>
         </section>
 
         <section>
@@ -637,11 +514,6 @@ board.on('ready', function() {
         <section>
             <h1>Example: LCD - I²C</h1>
             <img src="images/johnny-five/breadboard/lcd-i2c-PCF8574.png" class="stretch">
-            <aside class="notes">
-                <p>大家搭乘交通工具的時候都可以看到走馬燈播放站名, 這些都是LCD的應用場合</p>
-                Inter-integrated Circuit (I²C)
-                只需要兩條信號線：串列資料線(SDA)及串列時脈線(SCL)
-            </aside>
         </section>
 
         <section>
@@ -747,7 +619,8 @@ request(url, function(err, rsp, body) {
             <img src="images/johnny-five/breadboard/joystick-sparkfun.png" class="stretch">
         </section>
 
-        <section data-background-video="videos/robotarm-joystick.mp4">
+        <section>
+            <iframe data-src="https://www.youtube.com/embed/YcCUFHwwKA8" frameborder="0" allowfullscreen class="stretch"></iframe>
         </section>
 
         <section>
@@ -773,16 +646,14 @@ board.on('ready', function() {
     });
 });
             </code></pre>
-            <aside class="notes">
-            執行程式碼看座標數據
-            </aside>
         </section>
 
         <section>
             <h1>Robot Arm with Automation</h1>
         </section>
 
-        <section data-background-video="videos/robotarm-automation.mp4">
+        <section>
+            <iframe src="https://www.youtube.com/embed/XmPtqA6iZSI" frameborder="0" allowfullscreen class="stretch"></iframe>
         </section>
 
         <section>
@@ -862,9 +733,6 @@ board.on('ready', function() {
 
         <section data-background="#000" data-transition="zoom">
             <img src="images/woodworking/cotton-reel-holder.jpg" class="stretch">
-            <aside class="notes">
-                線捲盒
-            </aside>
         </section>
 
         <section data-transition="zoom">
@@ -926,19 +794,11 @@ board.on('ready', function() {
             <h2><a href="https://github.com/grbl/grbl/wiki" target="_blank">https://github.com/grbl/grbl/wiki</a></h2>
             <img src="images/logo/Grbl-logo-250px.png" class="stretch">
             <p>An open source, embedded, high performance g-code-parser and CNC milling controller written in optimized C that will run on a straight Arduino.</p>
-            <aside class="notes">
-                <p>大多數開源的3D印表機都可以看到它的身影</p>
-                <p>Most open source 3D printers have Grbl in their hearts. It has been adapted for use in hundreds of projects including laser cutters, automatic hand writers, hole drillers, graffiti painters and oddball drawing machines. Due to its performance, simplicity and frugal hardware requirements Grbl has grown into a little open source phenomenon.</p>
-                <p>In 2009, Simen Svale Skogsrud (http://bengler.no/grbl) graced the open-source community by writing and releasing the early versions of Grbl to everyone (inspired by the Arduino GCode Interpreter by Mike Ellery). Since 2011, Grbl is pushing ahead as a community-driven open-source project under the pragmatic leadership of Sungeun K. Jeon Ph.D. (@chamnit).</p>
-            </aside>
         </section>
 
         <section>
             <h2>Grbl's Pins</h2>
             <img src="images/demo/cnc/Arduino_GRBL.png" class="stretch">
-            <aside class="notes">
-                https://github.com/grbl/grbl/wiki/Connecting-Grbl
-            </aside>
         </section>
 
         <section>
@@ -1022,11 +882,6 @@ board.on('ready', function() {
                         <li><a href="http://2xod.com/articles/Arduino_Wifi_With_Hi_Flying_HF-LPT100_or_USR-WIFI232/" target="_blank">Arduino Wifi With Hi Flying HF-LPT100/USR WIFI232-T</a></li>
                     </ul>
                 </div>
-                
-                <aside class="notes">
-                    <a href="https://gist.github.com/ajfisher/1fdbcbbf96b7f2ba73cd" target="_blank">A NodeBot Over WiFi</a>
-                    <a href="http://2xod.com/articles/Arduino_Wifi_With_Hi_Flying_HF-LPT100_or_USR-WIFI232/" target="_blank">Arduino Wifi With Hi Flying HF-LPT100/USR WIFI232-T</a>
-                </aside>
             </section>
 
             <section>
@@ -1109,18 +964,10 @@ board.on('ready', function() {
             <section>
                 <h1>The Firmata library for Arduino</h1>
                 <h2><a href="https://www.arduino.cc/en/Reference/Firmata" target="_blank">https://www.arduino.cc/en/Reference/Firmata</a></h2>
-
-                <aside class="notes">
-                    <p>The Firmata library implements the Firmata protocol for communicating with software on the host computer. This allows you to write custom firmware without having to create your own protocol and objects for the programming environment that you are using.</p>
-                </aside>
             </section>
             <section>
                 <h2>Example</h2>
                 <img src="images/arduino/Arduino_Firmata_Example.png">
-
-                <aside class="notes">
-                    <p>This example shows how to send and receive analog messages using Firmata.</p>
-                </aside>
             </section>
             <section>
                 <h1>The Firmata library for Node.js</h1>
